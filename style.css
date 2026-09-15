@@ -1,0 +1,1415 @@
+/* =========================================================
+   HEALTHWISE — PROFESSIONAL HEALTH WEBSITE
+   GLOBAL RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:
+        "Inter",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background:#ffffff;
+    color:#18332d;
+    line-height:1.6;
+    overflow-x:hidden;
+}
+
+img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font:inherit;
+}
+
+.content-container,
+.header-container,
+.footer-container,
+.footer-bottom-container{
+    width:min(1180px, calc(100% - 32px));
+    margin:0 auto;
+}
+
+
+/* =========================================================
+   PAGE LOADER
+========================================================= */
+
+.page-loader{
+    position:fixed;
+    inset:0;
+    z-index:99999;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    background:#ffffff;
+
+    transition:
+        opacity .4s ease,
+        visibility .4s ease;
+}
+
+.page-loader.hidden{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
+
+.loader-logo{
+    width:58px;
+    height:58px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:18px;
+
+    background:#0b6b53;
+    color:#ffffff;
+
+    font-size:30px;
+    font-weight:800;
+
+    margin-bottom:20px;
+}
+
+.loader-spinner{
+    width:34px;
+    height:34px;
+
+    border:3px solid #dceee8;
+    border-top-color:#0b6b53;
+
+    border-radius:50%;
+
+    animation:
+        loaderSpin .8s linear infinite;
+}
+
+.page-loader p{
+    margin-top:14px;
+
+    color:#6b7d78;
+
+    font-size:14px;
+}
+
+@keyframes loaderSpin{
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.main-header{
+    position:sticky;
+    top:0;
+    z-index:5000;
+
+    background:rgba(255,255,255,.96);
+
+    border-bottom:1px solid #e8efec;
+
+    backdrop-filter:blur(14px);
+}
+
+.header-container{
+    min-height:78px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    gap:25px;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.site-logo{
+    display:flex;
+    align-items:center;
+
+    gap:11px;
+
+    flex-shrink:0;
+}
+
+.logo-icon{
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#0b6b53;
+    color:#ffffff;
+
+    border-radius:12px;
+
+    font-size:27px;
+    font-weight:700;
+
+    box-shadow:
+        0 8px 20px rgba(11,107,83,.18);
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-text strong{
+    color:#173f35;
+
+    font-size:20px;
+    line-height:1.1;
+
+    letter-spacing:-.4px;
+}
+
+.logo-text small{
+    color:#7b8d88;
+
+    font-size:9px;
+
+    margin-top:3px;
+
+    letter-spacing:.5px;
+}
+
+/* =========================================================
+   AD SLOTS
+========================================================= */
+
+.ad-slot{
+    width:100%;
+    min-height:90px;
+
+    margin:0 auto 38px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:
+        1px dashed #cbdad5;
+
+    border-radius:12px;
+
+    background:#ffffff;
+
+    color:#a1ada9;
+
+    font-size:10px;
+    font-weight:600;
+
+    letter-spacing:.8px;
+    text-transform:uppercase;
+}
+
+
+.ad-slot span{
+    opacity:.8;
+}
+
+
+.ad-bottom{
+    margin-top:46px;
+    margin-bottom:0;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+========================================================= */
+
+.main-navigation{
+    display:flex;
+    align-items:center;
+    gap:28px;
+
+    margin-left:auto;
+}
+
+.main-navigation a{
+    position:relative;
+
+    color:#536b64;
+
+    font-size:14px;
+    font-weight:600;
+
+    padding:29px 0;
+
+    transition:
+        color .25s ease;
+}
+
+.main-navigation a:hover,
+.main-navigation a.active{
+    color:#0b6b53;
+}
+
+.main-navigation a.active::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:18px;
+
+    height:2px;
+
+    background:#0b6b53;
+
+    border-radius:20px;
+}
+
+
+/* =========================================================
+   HEADER BUTTON
+========================================================= */
+
+.header-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    min-height:42px;
+
+    padding:0 18px;
+
+    border-radius:9px;
+
+    background:#0b6b53;
+    color:#ffffff;
+
+    font-size:13px;
+    font-weight:700;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+}
+
+.header-button:hover{
+    background:#085640;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(11,107,83,.18);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.mobile-menu-button{
+    display:none;
+
+    width:44px;
+    height:44px;
+
+    border:1px solid #dce8e4;
+    border-radius:10px;
+
+    background:#ffffff;
+
+    cursor:pointer;
+
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    gap:5px;
+}
+
+.mobile-menu-button span{
+    width:20px;
+    height:2px;
+
+    background:#174c3f;
+
+    border-radius:10px;
+
+    transition:.25s ease;
+}
+
+.mobile-menu-button.active span:nth-child(1){
+    transform:translateY(7px) rotate(45deg);
+}
+
+.mobile-menu-button.active span:nth-child(2){
+    opacity:0;
+}
+
+.mobile-menu-button.active span:nth-child(3){
+    transform:translateY(-7px) rotate(-45deg);
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+.mobile-navigation{
+    display:none;
+
+    padding:10px 16px 18px;
+
+    background:#ffffff;
+
+    border-top:1px solid #edf2f0;
+}
+
+.mobile-navigation a{
+    display:block;
+
+    padding:13px 8px;
+
+    border-bottom:1px solid #edf2f0;
+
+    color:#35564d;
+
+    font-size:14px;
+    font-weight:600;
+}
+
+.mobile-navigation a:last-child{
+    border-bottom:0;
+}
+
+.mobile-navigation.open{
+    display:block;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-section{
+    position:relative;
+
+    background:
+        linear-gradient(
+            120deg,
+            #f4faf8 0%,
+            #ffffff 55%,
+            #eef8f4 100%
+        );
+
+    overflow:hidden;
+}
+
+.hero-container{
+    width:min(1180px, calc(100% - 32px));
+
+    min-height:650px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        1.03fr
+        .97fr;
+
+    align-items:center;
+
+    gap:65px;
+
+    padding:65px 0;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.hero-label,
+.section-label{
+    display:inline-block;
+
+    color:#0b6b53;
+
+    font-size:11px;
+    font-weight:800;
+
+    letter-spacing:1.5px;
+
+    margin-bottom:15px;
+}
+
+.hero-content h1{
+    max-width:650px;
+
+    color:#173b32;
+
+    font-size:
+        clamp(
+            42px,
+            5vw,
+            70px
+        );
+
+    line-height:1.04;
+
+    letter-spacing:-2.5px;
+}
+
+.hero-content h1 span{
+    display:block;
+
+    color:#0b6b53;
+}
+
+.hero-description{
+    max-width:580px;
+
+    margin-top:25px;
+
+    color:#61746e;
+
+    font-size:17px;
+
+    line-height:1.8;
+}
+
+.hero-buttons{
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:32px;
+
+    flex-wrap:wrap;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.primary-button,
+.secondary-button,
+.outline-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:12px;
+
+    min-height:48px;
+
+    padding:0 21px;
+
+    border-radius:9px;
+
+    font-size:13px;
+    font-weight:750;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+}
+
+.primary-button{
+    background:#0b6b53;
+    color:#ffffff;
+
+    box-shadow:
+        0 9px 22px rgba(11,107,83,.16);
+}
+
+.primary-button:hover{
+    background:#085640;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 13px 28px rgba(11,107,83,.22);
+}
+
+.secondary-button{
+    background:#ffffff;
+    color:#0b6b53;
+
+    border:1px solid #cfe1da;
+}
+
+.secondary-button:hover{
+    background:#f3faf7;
+
+    transform:translateY(-2px);
+}
+
+.outline-button{
+    background:transparent;
+
+    color:#0b6b53;
+
+    border:1px solid #a9c9be;
+}
+
+.outline-button:hover{
+    background:#eef8f4;
+
+    transform:translateY(-2px);
+}
+
+.primary-button span,
+.secondary-button span,
+.outline-button span{
+    font-size:18px;
+
+    transition:
+        transform .25s ease;
+}
+
+.primary-button:hover span,
+.secondary-button:hover span,
+.outline-button:hover span{
+    transform:translateX(4px);
+}
+
+
+/* =========================================================
+   HERO TRUST
+========================================================= */
+
+.hero-trust{
+    display:flex;
+
+    align-items:center;
+
+    gap:22px;
+
+    margin-top:30px;
+
+    flex-wrap:wrap;
+}
+
+.trust-item{
+    display:flex;
+    align-items:center;
+
+    gap:7px;
+
+    color:#70827d;
+
+    font-size:12px;
+    font-weight:600;
+}
+
+.trust-icon{
+    width:20px;
+    height:20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#dff2eb;
+    color:#0b6b53;
+
+    font-size:11px;
+    font-weight:900;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-image-area{
+    position:relative;
+
+    padding:20px;
+}
+
+.hero-image-main{
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    box-shadow:
+        0 25px 60px rgba(24,61,51,.15);
+}
+
+.hero-image-main::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,0) 60%,
+            rgba(0,40,30,.18)
+        );
+}
+
+.hero-image-main img{
+    height:510px;
+
+    object-fit:cover;
+}
+
+.hero-floating-card{
+    position:absolute;
+
+    left:-5px;
+    bottom:0;
+
+    display:flex;
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px 18px;
+
+    background:#ffffff;
+
+    border:1px solid #e5efeb;
+
+    border-radius:14px;
+
+    box-shadow:
+        0 15px 35px rgba(25,61,51,.14);
+
+    z-index:2;
+}
+
+.floating-icon{
+    width:40px;
+    height:40px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:11px;
+
+    background:#e8f6f1;
+    color:#0b6b53;
+
+    font-size:19px;
+}
+
+.hero-floating-card div:last-child{
+    display:flex;
+    flex-direction:column;
+}
+
+.hero-floating-card strong{
+    color:#21483e;
+
+    font-size:13px;
+}
+
+.hero-floating-card span{
+    color:#83918d;
+
+    font-size:11px;
+}
+
+
+/* =========================================================
+   TRUST SECTION
+========================================================= */
+
+.trust-section{
+    padding:90px 0;
+
+    background:#ffffff;
+}
+
+.trust-section .content-container{
+    display:grid;
+
+    grid-template-columns:
+        .85fr
+        1.15fr;
+
+    gap:70px;
+
+    align-items:start;
+}
+
+.trust-heading h2{
+    max-width:480px;
+
+    color:#183c33;
+
+    font-size:
+        clamp(
+            30px,
+            4vw,
+            45px
+        );
+
+    line-height:1.15;
+
+    letter-spacing:-1.5px;
+}
+
+.trust-heading h2 span{
+    display:block;
+
+    color:#0b6b53;
+}
+
+.trust-text{
+    padding-top:27px;
+}
+
+.trust-text p{
+    margin-bottom:18px;
+
+    color:#687a75;
+
+    font-size:15px;
+
+    line-height:1.9;
+}
+
+.trust-text p:last-child{
+    margin-bottom:0;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.section-heading{
+    display:flex;
+
+    align-items:end;
+    justify-content:space-between;
+
+    gap:35px;
+
+    margin-bottom:40px;
+}
+
+.section-heading h2,
+.practices-intro h2,
+.editorial-content h2,
+.health-education-content h2,
+.supplement-content h2,
+.cta-content h2{
+    color:#183c33;
+
+    font-size:
+        clamp(
+            30px,
+            4vw,
+            45px
+        );
+
+    line-height:1.15;
+
+    letter-spacing:-1.5px;
+}
+
+.section-heading > p{
+    max-width:390px;
+
+    color:#70827c;
+
+    font-size:14px;
+
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   CATEGORY SECTION
+========================================================= */
+
+.categories-section{
+    padding:90px 0;
+
+    background:#f6faf8;
+}
+
+.category-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:22px;
+}
+
+.category-card{
+    overflow:hidden;
+
+    background:#ffffff;
+
+    border:1px solid #e3eeea;
+
+    border-radius:18px;
+
+    box-shadow:
+        0 8px 28px rgba(31,67,57,.05);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.category-card:hover{
+    transform:translateY(-7px);
+
+    box-shadow:
+        0 20px 40px rgba(31,67,57,.12);
+}
+
+.category-image{
+    position:relative;
+
+    height:250px;
+
+    overflow:hidden;
+}
+
+.category-image img{
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+        transform .6s ease;
+}
+
+.category-card:hover .category-image img{
+    transform:scale(1.06);
+}
+
+.category-badge{
+    position:absolute;
+
+    top:17px;
+    left:17px;
+
+    padding:6px 10px;
+
+    border-radius:6px;
+
+    background:rgba(255,255,255,.94);
+
+    color:#0b6b53;
+
+    font-size:9px;
+    font-weight:800;
+
+    letter-spacing:1px;
+}
+
+.category-content{
+    padding:25px;
+}
+
+.category-icon{
+    width:44px;
+    height:44px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:15px;
+
+    border-radius:12px;
+
+    background:#eef8f4;
+
+    font-size:20px;
+}
+
+.category-content h3{
+    color:#1d4439;
+
+    font-size:22px;
+
+    margin-bottom:9px;
+}
+
+.category-content p{
+    min-height:82px;
+
+    color:#71817d;
+
+    font-size:13px;
+
+    line-height:1.8;
+}
+
+.category-link{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    margin-top:20px;
+
+    padding-top:16px;
+
+    border-top:1px solid #edf2f0;
+
+    color:#0b6b53;
+
+    font-size:13px;
+    font-weight:800;
+}
+
+.category-link strong{
+    font-size:18px;
+
+    transition:
+        transform .25s ease;
+}
+
+.category-card:hover .category-link strong{
+    transform:translateX(5px);
+}
+
+
+/* =========================================================
+   HEALTH PRACTICES
+========================================================= */
+
+.practices-section{
+    padding:95px 0;
+
+    background:#ffffff;
+}
+
+.practices-intro{
+    max-width:680px;
+
+    margin-bottom:45px;
+}
+
+.practices-intro h2 span{
+    color:#0b6b53;
+}
+
+.practices-intro p{
+    max-width:610px;
+
+    margin-top:17px;
+
+    color:#70817c;
+
+    font-size:15px;
+}
+
+.practice-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    border-top:1px solid #e4ece9;
+    border-left:1px solid #e4ece9;
+}
+
+.practice-item{
+    position:relative;
+
+    min-height:235px;
+
+    padding:30px;
+
+    border-right:1px solid #e4ece9;
+    border-bottom:1px solid #e4ece9;
+
+    transition:
+        background .25s ease;
+}
+
+.practice-item:hover{
+    background:#f7fbf9;
+}
+
+.practice-number{
+    position:absolute;
+
+    top:20px;
+    right:22px;
+
+    color:#c4d8d1;
+
+    font-size:11px;
+    font-weight:800;
+}
+
+.practice-icon{
+    width:48px;
+    height:48px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin-bottom:18px;
+
+    border-radius:13px;
+
+    background:#eef8f4;
+
+    font-size:22px;
+}
+
+.practice-item h3{
+    margin-bottom:8px;
+
+    color:#21473d;
+
+    font-size:17px;
+}
+
+.practice-item p{
+    color:#73837e;
+
+    font-size:13px;
+
+    line-height:1.75;
+}
+
+
+/* =========================================================
+   EDITORIAL FOOD SECTION
+========================================================= */
+
+.editorial-section{
+    padding:95px 0;
+
+    background:#f5faf8;
+}
+
+.editorial-layout{
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    align-items:center;
+
+    gap:70px;
+}
+
+.editorial-image{
+    overflow:hidden;
+
+    border-radius:22px;
+
+    box-shadow:
+        0 20px 45px rgba(22,61,50,.12);
+}
+
+.editorial-image img{
+    height:510px;
+
+    object-fit:cover;
+
+    transition:
+        transform .6s ease;
+}
+
+.editorial-image:hover img{
+    transform:scale(1.03);
+}
+
+.editorial-content h2{
+    margin-bottom:22px;
+}
+
+.editorial-content p{
+    margin-bottom:17px;
+
+    color:#6f817b;
+
+    font-size:15px;
+
+    line-height:1.9;
+}
+
+.editorial-content .primary-button{
+    margin-top:10px;
+}
+
+
+/* =========================================================
+   HEALTH EDUCATION
+========================================================= */
+
+.health-education-section{
+    padding:95px 0;
+
+    background:#ffffff;
+}
+
+.health-education-grid{
+    display:grid;
+
+    grid-template-columns:
+        .9fr
+        1.1fr;
+
+    align-items:center;
+
+    gap:70px;
+}
+
+.health-education-content h2{
+    margin-bottom:23px;
+}
+
+.health-education-content p{
+    margin-bottom:17px;
+
+    color:#70817c;
+
+    font-size:15px;
+
+    line-height:1.9;
+}
+
+.health-education-content .outline-button{
+    margin-top:10px;
+}
+
+.health-education-image{
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    box-shadow:
+        0 20px 45px rgba(22,61,50,.12);
+}
+
+.health-education-image img{
+    height:500px;
+
+    object-fit:cover;
+}
+
+.education-overlay{
+    position:absolute;
+
+    left:22px;
+    right:22px;
+    bottom:22px;
+
+    padding:19px 20px;
+
+    border-radius:13px;
+
+    background:rgba(255,255,255,.94);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.08);
+}
+
+.education-overlay span{
+    display:block;
+
+    color:#0b6b53;
+
+    font-size:9px;
+    font-weight:800;
+
+    letter-spacing:1.2px;
+
+    margin-bottom:4px;
+}
+
+.education-overlay strong{
+    color:#23483e;
+
+    font-size:15px;
+}
+
+
+/* =========================================================
+   SUPPLEMENT SECTION
+========================================================= */
+
+.supplement-section{
+    padding:95px 0;
+
+    background:#f5faf8;
+}
+
+.supplement-box{
+    display:grid;
+
+    grid-template-columns:
+        1fr
+        1fr;
+
+    align-items:stretch;
+
+    overflow:hidden;
+
+    background:#ffffff;
+
+    border:1px solid #e1ece8;
+
+    border-radius:24px;
+
+    box-shadow:
+        0 18px 45px rgba(24,65,54,.08);
+}
+
+.supplement-image{
+    min-height:500px;
+}
+
+.supplement-image img{
+    height:100%;
+
+    object-fit:cover;
+}
+
+.supplement-content{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding:55px;
+}
+
+.supplement-content h2{
+    margin-bottom:20px;
+}
+
+.supplement-content p{
+    margin-bottom:16px;
+
+    color:#6f817c;
+
+    font-size:14px;
+
+    line-height:1.9;
+}
+
+.supplement-content .primary-button{
+    align-self:flex-start;
+
+    margin-top:12px;
+}
+
+
+/* =========================================================
+   PRODUCT TRUST
+========================================================= */
+
+.product-trust-section{
+    padding:75px 0;
+
+    background:#ffffff;
+}
+
+.product-trust-box{
+    display:grid;
+
+    grid-template-columns:75px 1fr;
+
+    gap:28px;
+
+    padding:40px;
+
+    background:#f4faf7;
+
+    border:1px solid #dcece6;
+
+    border-radius:18px;
+}
+
+.product-trust-icon{
+    width:58px;
+    height:58px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#0b6b53;
+    color:#ffffff;
+
+    font-size:25px;
+    font-weight:800;
+
+    box-shadow:
+        0 10px 22px rgba(11,107,83,.18);
+}
+
+.product-trust-content h2{
+    margin-bottom:17px;
+
+    color:#183c33;
+
+    font-size:30px;
+
+    line-height:1.2;
+}
+
+
+
+.product-trust-conte
