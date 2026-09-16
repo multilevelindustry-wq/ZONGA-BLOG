@@ -1,0 +1,11 @@
+/* Basic fallback styling. Replace or extend with your main site CSS. */
+.legal-page{font-family:Arial,sans-serif;line-height:1.7;color:#263238;background:#f7faf9;min-height:100vh}
+.legal-header{padding:22px 7%;background:#fff;border-bottom:1px solid #e5e9e7}
+.legal-header a{font-size:25px;font-weight:800;color:#16805b;text-decoration:none}
+.legal-content{max-width:900px;margin:45px auto;padding:0 25px}
+.legal-content h1{font-size:42px;line-height:1.15;color:#123c30;margin-bottom:25px}
+.legal-content h2{font-size:25px;color:#16805b;margin-top:35px}
+.legal-content p{font-size:17px}
+.legal-content a{color:#16805b}
+.legal-page footer{text-align:center;padding:35px 20px;background:#123c30;color:#fff;margin-top:60px}
+@media(max-width:600px){.legal-content h1{font-size:32px}.legal-content h2{font-size:22px}.legal-content p{font-size:16px}}

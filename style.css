@@ -210,47 +210,6 @@ button{
     letter-spacing:.5px;
 }
 
-/* =========================================================
-   AD SLOTS
-========================================================= */
-
-.ad-slot{
-    width:100%;
-    min-height:90px;
-
-    margin:0 auto 38px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border:
-        1px dashed #cbdad5;
-
-    border-radius:12px;
-
-    background:#ffffff;
-
-    color:#a1ada9;
-
-    font-size:10px;
-    font-weight:600;
-
-    letter-spacing:.8px;
-    text-transform:uppercase;
-}
-
-
-.ad-slot span{
-    opacity:.8;
-}
-
-
-.ad-bottom{
-    margin-top:46px;
-    margin-bottom:0;
-}
-
 
 /* =========================================================
    DESKTOP NAVIGATION
@@ -1410,6 +1369,18 @@ button{
     line-height:1.2;
 }
 
+.product-trust-content p{
+    max-width:850px;
+
+    margin-bottom:12px;
+
+    color:#6f817b;
+
+    font-size:13px;
+
+    line-height:1.85;
+}
+
 .product-trust-content p:last-child{
     margin-bottom:0;
 }
@@ -2080,4 +2051,5 @@ button{
         grid-column:auto;
     }
 
-   }
+}
+

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Explore FoodWise articles about healthy foods, nutrition, ingredients, cooking and better eating habits."
+    >
+
+    <meta
+        name="theme-color"
+        content="#0b6b53"
+    >
+
+    <title>
+        Food | HealthWise
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="category.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     PAGE LOADER
+========================================================= -->
+
+<div
+    class="category-loader"
+    id="categoryLoader"
+>
+
+    <div class="category-loader-logo">
+        +
+    </div>
+
+    <div class="category-loader-spinner"></div>
+
+    <p>
+        Loading Food...
+    </p>
+
+</div>
+
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header
+    class="category-header"
+    id="categoryHeader"
+>
+
+    <div class="category-header-inner">
+
+
+        <a
+            href="index.html"
+            class="category-logo"
+        >
+
+            <span class="category-logo-icon">
+                +
+            </span>
+
+            <span class="category-logo-text">
+
+                <strong>
+                    HealthWise
+                </strong>
+
+                <small>
+                    Health • Nutrition • Wellness
+                </small>
+
+            </span>
+
+        </a>
+
+
+
+        <nav
+            class="category-desktop-nav"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a
+                href="food.html"
+                class="active"
+            >
+                Food
+            </a>
+
+            <a href="health.html">
+                Health
+            </a>
+
+            <a href="supplements.html">
+                Supplements
+            </a>
+
+        </nav>
+
+
+
+        <button
+            type="button"
+            class="category-menu-button"
+            id="categoryMenuButton"
+            aria-label="Open menu"
+            aria-expanded="false"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </div>
+
+
+
+    <nav
+        class="category-mobile-nav"
+        id="categoryMobileNav"
+    >
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="food.html">
+            Food
+        </a>
+
+        <a href="health.html">
+            Health
+        </a>
+
+        <a href="supplements.html">
+            Supplements
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+
+<!-- =========================================================
+     CATEGORY HERO
+========================================================= -->
+
+<section class="category-hero food-hero">
+
+    <div class="category-container">
+
+        <div class="category-hero-content">
+
+            <span class="category-label">
+                FOOD & NUTRITION
+            </span>
+
+            <h1>
+                Eat Better.
+                <span>
+                    Understand Your Food.
+                </span>
+            </h1>
+
+            <p>
+
+                Discover educational articles about healthy
+                foods, ingredients, nutrition, preparation
+                and everyday eating choices.
+
+            </p>
+
+        </div>
+
+
+        <div class="category-hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=85"
+                alt="Fresh fruits and vegetables representing healthy nutrition"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =========================================================
+     TRUST STRIP
+========================================================= -->
+
+<section class="category-trust">
+
+    <div class="category-container">
+
+        <div class="category-trust-item">
+
+            <span>
+                ✓
+            </span>
+
+            <div>
+
+                <strong>
+                    Educational Content
+                </strong>
+
+                <small>
+                    Created to make health information easier
+                    to understand.
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="category-trust-item">
+
+            <span>
+                ✓
+            </span>
+
+            <div>
+
+                <strong>
+                    Practical Information
+                </strong>
+
+                <small>
+                    Everyday food and nutrition topics.
+                </small>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="category-trust-item">
+
+            <span>
+                ✓
+            </span>
+
+            <div>
+
+                <strong>
+                    Reader Focused
+                </strong>
+
+                <small>
+                    Simple articles designed for real people.
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =========================================================
+     ARTICLES
+========================================================= -->
+
+<main>
+
+<section class="posts-section">
+
+    <div class="category-container">
+
+
+        <div class="posts-heading">
+
+            <div>
+
+                <span class="category-label">
+                    FOOD LIBRARY
+                </span>
+
+                <h2>
+                    Explore Food & Nutrition
+                </h2>
+
+            </div>
+
+            <p>
+                Discover our latest educational food articles.
+            </p>
+
+        </div>
+
+
+
+        <!-- =================================================
+             AD SLOT
+        ================================================== -->
+
+        <div class="ad-slot ad-top">
+
+            <span>
+                Advertisement
+            </span>
+
+            <!-- Adsterra code goes here -->
+
+        </div>
+
+
+
+        <!-- =================================================
+             POST GRID
+        ================================================== -->
+
+        <div
+            class="posts-grid"
+            id="foodPosts"
+        >
+        </div>
+
+
+
+        <!-- =================================================
+             BOTTOM AD
+        ================================================== -->
+
+        <div class="ad-slot ad-bottom">
+
+            <span>
+                Advertisement
+            </span>
+
+            <!-- Adsterra code goes here -->
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =========================================================
+     EDUCATIONAL CTA
+========================================================= -->
+
+<section class="category-cta">
+
+    <div class="category-container">
+
+        <div class="category-cta-box">
+
+            <span class="category-label">
+                HEALTHWISE
+            </span>
+
+            <h2>
+                Good Nutrition Starts With Understanding
+            </h2>
+
+            <p>
+
+                Explore our health and supplement sections
+                for more educational information.
+
+            </p>
+
+            <div class="category-cta-buttons">
+
+                <a
+                    href="health.html"
+                    class="category-primary-button"
+                >
+                    Explore Health
+                    <span>→</span>
+                </a>
+
+                <a
+                    href="supplements.html"
+                    class="category-secondary-button"
+                >
+                    Explore Supplements
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="category-footer">
+
+    <div class="category-footer-inner">
+
+
+        <div class="category-footer-brand">
+
+            <a
+                href="index.html"
+                class="category-logo"
+            >
+
+                <span class="category-logo-icon">
+                    +
+                </span>
+
+                <span class="category-logo-text">
+
+                    <strong>
+                        HealthWise
+                    </strong>
+
+                    <small>
+                        Health • Nutrition • Wellness
+                    </small>
+
+                </span>
+
+            </a>
+
+            <p>
+
+                Making health, nutrition and wellness
+                information easier to understand.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="category-footer-column">
+
+            <h3>
+                Explore
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="food.html">
+                Food
+            </a>
+
+            <a href="health.html">
+                Health
+            </a>
+
+            <a href="supplements.html">
+                Supplements
+            </a>
+
+        </div>
+
+
+
+        <div class="category-footer-column">
+
+            <h3>
+                Information
+            </h3>
+
+            <a href="about-us.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="privacy-policy.html">
+                Privacy Policy
+            </a>
+
+            <a href="terms-and-conditions.html">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+
+
+        <div class="category-footer-column">
+
+            <h3>
+                Important
+            </h3>
+
+            <a href="medical-disclaimer.html">
+                Medical Disclaimer
+            </a>
+
+            <a href="affiliate-disclosure.html">
+                Affiliate Disclosure
+            </a>
+
+            <a href="product-transparency.html">
+                Product Transparency
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="category-footer-bottom">
+
+        <p>
+            © 2026 HealthWise. All rights reserved.
+        </p>
+
+        <p>
+            Health Education • Nutrition • Wellness
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<script src="food.js"></script>
+
+</body>
+</html>
+
