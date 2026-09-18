@@ -70,10 +70,10 @@ const DEFAULT_ARTICLES = [
             "Fresh oranges and vitamin C rich fruits",
 
         date:
-            "2026-08-22",
+            "2026-09-18",
 
         author:
-            "HealthWise Editorial Team",
+            "Dr Samson Fred",
 
         readTime:
             "6 min read"
