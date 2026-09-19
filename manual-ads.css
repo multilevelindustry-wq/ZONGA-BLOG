@@ -1,0 +1,464 @@
+/* =========================================================
+   ZONGO MANUAL ADS
+   GOOGLE-STYLE VISUAL
+   ARTICLE ONLY
+========================================================= */
+
+.zm-ad {
+
+    width: 100%;
+    max-width: 100%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+
+    margin: 32px auto;
+
+    padding: 0;
+
+    clear: both;
+
+}
+
+
+/* =========================================================
+   AD CARD
+========================================================= */
+
+.zm-ad-card {
+
+    width: 100%;
+    max-width: 640px;
+
+    box-sizing: border-box;
+
+    position: relative;
+
+    background: #fff;
+
+    border: 1px solid #dadce0;
+
+    border-radius: 8px;
+
+    padding: 14px;
+
+    text-align: left;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #202124;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   TOP ROW
+========================================================= */
+
+.zm-ad-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 10px;
+
+}
+
+
+/* =========================================================
+   AD LABEL
+========================================================= */
+
+.zm-ad-label {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    line-height: 1;
+
+    color: #5f6368;
+
+    background: #f1f3f4;
+
+    border-radius: 3px;
+
+    padding: 4px 6px;
+
+}
+
+
+/* =========================================================
+   THREE DOT MENU
+========================================================= */
+
+.zm-ad-menu {
+
+    width: 32px;
+
+    height: 32px;
+
+    border: 0;
+
+    background: transparent;
+
+    padding: 0;
+
+    margin: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    color: #5f6368;
+
+}
+
+
+.zm-ad-menu:hover {
+
+    background: #f1f3f4;
+
+}
+
+
+.zm-ad-dots {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+}
+
+
+.zm-ad-dots span {
+
+    width: 3px;
+
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: currentColor;
+
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.zm-ad-image-wrap {
+
+    width: 100%;
+
+    margin: 0 0 12px;
+
+    border-radius: 6px;
+
+    overflow: hidden;
+
+}
+
+
+.zm-ad-image {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    max-height: 320px;
+
+    object-fit: cover;
+
+}
+
+
+/* =========================================================
+   ADVERTISER
+========================================================= */
+
+.zm-ad-advertiser {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 6px;
+
+}
+
+
+.zm-ad-avatar {
+
+    width: 24px;
+
+    height: 24px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    flex-shrink: 0;
+
+}
+
+
+.zm-ad-advertiser-name {
+
+    font-size: 12px;
+
+    color: #5f6368;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.zm-ad-title {
+
+    display: block;
+
+    margin: 0 0 7px;
+
+    font-size: 19px;
+
+    line-height: 1.3;
+
+    font-weight: 600;
+
+    color: #1a0dab;
+
+    text-decoration: none;
+
+}
+
+
+.zm-ad-title:hover {
+
+    text-decoration: underline;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.zm-ad-description {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    color: #4d5156;
+
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.zm-ad-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 36px;
+
+    margin-top: 14px;
+
+    padding: 0 18px;
+
+    border-radius: 18px;
+
+    border: 1px solid #dadce0;
+
+    background: #fff;
+
+    color: #1a73e8;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+
+.zm-ad-button:hover {
+
+    background: #f8fafd;
+
+}
+
+
+/* =========================================================
+   MENU POPUP
+========================================================= */
+
+.zm-ad-popup {
+
+    position: absolute;
+
+    top: 48px;
+
+    right: 12px;
+
+    z-index: 1000;
+
+    width: 190px;
+
+    background: #fff;
+
+    border: 1px solid #dadce0;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,.16);
+
+    padding: 6px;
+
+    display: none;
+
+}
+
+
+.zm-ad-popup.show {
+
+    display: block;
+
+}
+
+
+.zm-ad-popup button {
+
+    width: 100%;
+
+    border: 0;
+
+    background: transparent;
+
+    text-align: left;
+
+    padding: 10px 12px;
+
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    color: #3c4043;
+
+    cursor: pointer;
+
+}
+
+
+.zm-ad-popup button:hover {
+
+    background: #f1f3f4;
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .zm-ad {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        margin: 26px auto;
+
+        padding: 0;
+
+    }
+
+
+    .zm-ad-card {
+
+        width: 100%;
+
+        max-width: 100%;
+
+        border-radius: 7px;
+
+        padding: 12px;
+
+    }
+
+
+    .zm-ad-title {
+
+        font-size: 17px;
+
+    }
+
+
+    .zm-ad-description {
+
+        font-size: 13px;
+
+    }
+
+
+    .zm-ad-image {
+
+        max-height: 260px;
+
+    }
+
+}
+
+
