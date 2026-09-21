@@ -51,7 +51,7 @@ const supplementPosts = [
             "8 min read",
 
         url:
-            "vitamin-d.html"
+            "supplement/Are-supplements-necessary?.html"
     },
 
 
