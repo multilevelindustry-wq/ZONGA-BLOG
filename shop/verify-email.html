@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Verify Email | ZONGO </title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 460px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 35px rgba(0,0,0,.08);
+        }
+
+        .icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            margin-bottom: 12px;
+        }
+
+        .description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .email {
+            background: #f2f3f5;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 700;
+            word-break: break-word;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 10px;
+            background: #111;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            opacity: .6;
+        }
+
+        .secondary {
+            background: #eee;
+            color: #111;
+        }
+
+        .message {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .message.show {
+            display: block;
+        }
+
+        .success {
+            background: #e8fff0;
+            color: #08752c;
+        }
+
+        .error {
+            background: #ffe8e8;
+            color: #b00020;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="icon">
+            ✉️
+        </div>
+
+        <h1>
+            Verify Your Email
+        </h1>
+
+        <p class="description">
+
+            We sent a verification link to your
+            email address.
+
+            Please open your email and click the
+            verification link.
+
+        </p>
+
+
+        <div
+            id="email"
+            class="email"
+        >
+            Checking account...
+        </div>
+
+
+        <button
+            id="checkButton"
+        >
+            I've Verified My Email
+        </button>
+
+
+        <button
+            id="resendButton"
+            class="secondary"
+        >
+            Resend Verification Email
+        </button>
+
+
+        <button
+            id="logoutButton"
+            class="secondary"
+        >
+            Logout
+        </button>
+
+
+        <div
+            id="message"
+            class="message"
+        ></div>
+
+    </div>
+
+</div>
+
+
+<script type="module">
+
+import {
+    waitForAuth,
+    refreshVerificationStatus,
+    sendVerificationEmail,
+    logoutUser
+} from "./auth.js";
+
+
+const emailElement =
+    document.getElementById(
+        "email"
+    );
+
+
+const checkButton =
+    document.getElementById(
+        "checkButton"
+    );
+
+
+const resendButton =
+    document.getElementById(
+        "resendButton"
+    );
+
+
+const logoutButton =
+    document.getElementById(
+        "logoutButton"
+    );
+
+
+const message =
+    document.getElementById(
+        "message"
+    );
+
+
+function showMessage(
+    text,
+    type
+) {
+
+    message.textContent =
+        text;
+
+    message.className =
+        `message show ${type}`;
+
+}
+
+
+/* ==========================================================
+   INITIALIZE
+========================================================== */
+
+async function initialize() {
+
+    const user =
+        await waitForAuth();
+
+
+    if (!user) {
+
+        window.location.href =
+            "login.html";
+
+        return;
+
+    }
+
+
+    emailElement.textContent =
+        user.email;
+
+
+    if (
+        user.emailVerified
+    ) {
+
+        redirectByRole();
+
+    }
+
+}
+
+
+initialize();
+
+
+/* ==========================================================
+   REDIRECT BY ROLE
+========================================================== */
+
+async function redirectByRole() {
+
+    /*
+       Import role function only when needed.
+    */
+
+    const {
+        getUserRole
+    } = await import(
+        "./auth.js"
+    );
+
+
+    const user =
+        await waitForAuth();
+
+
+    if (!user) {
+
+        return;
+
+    }
+
+
+    const role =
+        await getUserRole(
+            user.uid
+        );
+
+
+    if (
+        role === "buyer"
+    ) {
+
+        window.location.href =
+            "buyer-dashboard.html";
+
+        return;
+
+    }
+
+
+    if (
+        role === "seller"
+    ) {
+
+        window.location.href =
+            "seller-dashboard.html";
+
+        return;
+
+    }
+
+
+    showMessage(
+        "Email verified, but your account role could not be found.",
+        "error"
+    );
+
+}
+
+
+/* ==========================================================
+   CHECK VERIFICATION
+========================================================== */
+
+checkButton.addEventListener(
+    "click",
+    async () => {
+
+        checkButton.disabled =
+            true;
+
+        checkButton.textContent =
+            "Checking...";
+
+
+        try {
+
+            const verified =
+                await refreshVerificationStatus();
+
+
+            if (verified) {
+
+                showMessage(
+                    "Email verified successfully. Redirecting...",
+                    "success"
+                );
+
+
+                await redirectByRole();
+
+                return;
+
+            }
+
+
+            showMessage(
+                "Your email is not verified yet. Open the verification email and click the link.",
+                "error"
+            );
+
+
+        } catch (error) {
+
+            console.error(
+                error
+            );
+
+
+            showMessage(
+                "Unable to check verification status.",
+                "error"
+            );
+
+        }
+
+
+        checkButton.disabled =
+            false;
+
+        checkButton.textContent =
+            "I've Verified My Email";
+
+    }
+);
+
+
+/* ==========================================================
+   RESEND EMAIL
+========================================================== */
+
+resendButton.addEventListener(
+    "click",
+    async () => {
+
+        resendButton.disabled =
+            true;
+
+        resendButton.textContent =
+            "Sending...";
+
+
+        try {
+
+            await sendVerificationEmail();
+
+
+            showMessage(
+                "A new verification email has been sent.",
+                "success"
+            );
+
+
+        } catch (error) {
+
+            console.error(
+                error
+            );
+
+
+            showMessage(
+                error.message ||
+                "Unable to send verification email.",
+                "error"
+            );
+
+        }
+
+
+        resendButton.disabled =
+            false;
+
+        resendButton.textContent =
+            "Resend Verification Email";
+
+    }
+);
+
+
+/* ==========================================================
+   LOGOUT
+========================================================== */
+
+logoutButton.addEventListener(
+    "click",
+    async () => {
+
+        try {
+
+            await logoutUser(
+                "login.html"
+            );
+
+        } catch (error) {
+
+            console.error(
+                error
+            );
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+
+</html>

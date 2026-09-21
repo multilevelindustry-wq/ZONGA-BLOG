@@ -1,0 +1,1315 @@
+/* ==========================================================
+   RESET
+========================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background: #f6f7f9;
+    color: #171717;
+
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.seller-header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e8e8e8;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.seller-header-inner {
+    width: min(1180px, calc(100% - 32px));
+    min-height: 68px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.seller-logo {
+    color: #111111;
+    text-decoration: none;
+
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+}
+
+.seller-header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dashboard-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 42px;
+    padding: 0 17px;
+
+    border: 1px solid #dedede;
+    border-radius: 10px;
+
+    background: #ffffff;
+    color: #222222;
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+}
+
+.dashboard-link:hover {
+    background: #111111;
+    border-color: #111111;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================================
+   MAIN PAGE
+========================================================== */
+
+.seller-page {
+    width: 100%;
+    padding: 45px 0 80px;
+}
+
+.seller-container {
+    width: min(980px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+
+/* ==========================================================
+   PAGE INTRO
+========================================================== */
+
+.page-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 28px;
+    padding: 0 11px;
+
+    border-radius: 999px;
+
+    background: #111111;
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .8px;
+}
+
+.page-intro h1 {
+    margin-top: 13px;
+
+    color: #111111;
+
+    font-size: clamp(28px, 5vw, 42px);
+    line-height: 1.15;
+    font-weight: 850;
+    letter-spacing: -.7px;
+}
+
+.page-intro p {
+    max-width: 650px;
+    margin: 12px auto 0;
+
+    color: #707070;
+
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   PROTECTION MESSAGE
+========================================================== */
+
+.protection-message {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px 18px;
+
+    border: 1px solid #e4e4e4;
+    border-radius: 12px;
+
+    background: #ffffff;
+    color: #555555;
+
+    font-size: 14px;
+    font-weight: 650;
+}
+
+
+/* ==========================================================
+   PRODUCT FORM
+========================================================== */
+
+.product-form {
+    width: 100%;
+}
+
+
+/* ==========================================================
+   FORM SECTION
+========================================================== */
+
+.form-section {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e6e6e6;
+    border-radius: 18px;
+
+    box-shadow:
+        0 3px 15px rgba(0, 0, 0, .035);
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    margin-bottom: 25px;
+}
+
+.section-number {
+    flex: 0 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 11px;
+
+    background: #111111;
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.section-heading h2 {
+    color: #161616;
+
+    font-size: 19px;
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+.section-heading p {
+    margin-top: 4px;
+
+    color: #777777;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   FORM GRID
+========================================================== */
+
+.form-grid {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.form-group {
+    width: 100%;
+    min-width: 0;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+
+/* ==========================================================
+   LABELS
+========================================================== */
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #282828;
+
+    font-size: 13px;
+    font-weight: 750;
+}
+
+.form-group label span {
+    color: #d62828;
+}
+
+
+/* ==========================================================
+   INPUTS
+========================================================== */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+
+    border: 1px solid #dddddd;
+    border-radius: 11px;
+
+    background: #ffffff;
+    color: #171717;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+.form-group input,
+.form-group select {
+    height: 48px;
+    padding: 0 14px;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    padding: 13px 14px;
+
+    resize: vertical;
+    line-height: 1.6;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #a0a0a0;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #111111;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 0, 0, .06);
+}
+
+
+/* ==========================================================
+   PRICE PREFIX
+========================================================== */
+
+.input-prefix {
+    position: relative;
+    width: 100%;
+}
+
+.input-prefix > span {
+    position: absolute;
+
+    left: 14px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #555555;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    pointer-events: none;
+}
+
+.input-prefix input {
+    padding-left: 31px;
+}
+
+
+/* ==========================================================
+   MAIN IMAGE UPLOAD
+========================================================== */
+
+.main-image-upload {
+    width: 100%;
+}
+
+.image-upload-box {
+    display: block;
+
+    width: 100%;
+    min-height: 270px;
+
+    cursor: pointer;
+}
+
+.image-preview {
+    width: 100%;
+    min-height: 270px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    border: 2px dashed #d5d5d5;
+    border-radius: 16px;
+
+    background: #fafafa;
+
+    text-align: center;
+
+    transition:
+        border-color .2s ease,
+        background .2s ease;
+}
+
+.image-upload-box:hover .image-preview {
+    border-color: #111111;
+    background: #f7f7f7;
+}
+
+.upload-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 13px;
+
+    border-radius: 50%;
+
+    background: #eeeeee;
+
+    font-size: 25px;
+}
+
+.image-preview strong {
+    color: #222222;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.image-preview small {
+    margin-top: 5px;
+    color: #888888;
+    font-size: 12px;
+}
+
+.upload-note {
+    margin-top: 10px;
+
+    color: #777777;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   CONTACT WARNING
+========================================================== */
+
+.contact-warning {
+    margin-bottom: 20px;
+    padding: 13px 15px;
+
+    border: 1px solid #e8e8e8;
+    border-radius: 10px;
+
+    background: #fafafa;
+    color: #666666;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   VARIATION INFO
+========================================================== */
+
+.variation-info {
+    margin-bottom: 18px;
+    padding: 15px 17px;
+
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+
+    background: #fafafa;
+}
+
+.variation-info strong {
+    display: block;
+
+    color: #333333;
+    font-size: 13px;
+}
+
+.variation-info p {
+    margin-top: 5px;
+
+    color: #777777;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   VARIATIONS CONTAINER
+========================================================== */
+
+.variations-container {
+    width: 100%;
+}
+
+.variation-item {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 17px;
+
+    border: 1px solid #e2e2e2;
+    border-radius: 13px;
+
+    background: #fafafa;
+}
+
+
+/* ==========================================================
+   ADD VARIATION
+========================================================== */
+
+.add-variation-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+    padding: 0 18px;
+
+    border: 1px solid #111111;
+    border-radius: 10px;
+
+    background: #ffffff;
+    color: #111111;
+
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 750;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        transform .2s ease;
+}
+
+.add-variation-button:hover {
+    background: #111111;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================================
+   TERMS
+========================================================== */
+
+.terms-check {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+
+    cursor: pointer;
+}
+
+.terms-check input {
+    flex: 0 0 auto;
+
+    width: 18px;
+    height: 18px;
+
+    margin-top: 2px;
+
+    accent-color: #111111;
+
+    cursor: pointer;
+}
+
+.terms-check span {
+    color: #666666;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================================
+   UPLOAD STATUS
+========================================================== */
+
+.upload-status {
+    width: 100%;
+    margin-top: 18px;
+
+    color: #666666;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+/* ==========================================================
+   PUBLISH BUTTON
+========================================================== */
+
+.publish-button {
+    width: 100%;
+    min-height: 54px;
+
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #111111;
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        opacity .2s ease;
+}
+
+.publish-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 9px 24px rgba(0, 0, 0, .14);
+}
+
+.publish-button:active {
+    transform: translateY(0);
+}
+
+.publish-button:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+
+/* ==========================================================
+   IMAGE PREVIEW WHEN IMAGE IS LOADED
+========================================================== */
+
+.image-preview img {
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+    height: 250px;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+}
+
+
+/* ==========================================================
+   RESPONSIVE — TABLET
+========================================================== */
+
+@media (max-width: 760px) {
+
+    .seller-page {
+        padding: 32px 0 60px;
+    }
+
+    .seller-container {
+        width: min(
+            100% - 24px,
+            680px
+        );
+    }
+
+    .form-section {
+        padding: 22px 18px;
+        border-radius: 15px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 17px;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .page-intro h1 {
+        font-size: 30px;
+    }
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE — MOBILE
+========================================================== */
+
+@media (max-width: 520px) {
+
+    .seller-header-inner {
+        width: calc(100% - 20px);
+        min-height: 60px;
+        gap: 10px;
+    }
+
+    .seller-logo {
+        font-size: 19px;
+    }
+
+    .dashboard-link {
+        min-height: 38px;
+        padding: 0 12px;
+
+        font-size: 12px;
+    }
+
+    .seller-page {
+        padding: 25px 0 45px;
+    }
+
+    .seller-container {
+        width: calc(100% - 18px);
+    }
+
+    .page-intro {
+        margin-bottom: 22px;
+    }
+
+    .page-intro h1 {
+        font-size: 27px;
+    }
+
+    .page-intro p {
+        font-size: 13px;
+    }
+
+    .form-section {
+        padding: 19px 14px;
+        margin-bottom: 14px;
+
+        border-radius: 14px;
+    }
+
+    .section-heading {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .section-number {
+        width: 34px;
+        height: 34px;
+
+        border-radius: 9px;
+
+        font-size: 10px;
+    }
+
+    .section-heading h2 {
+        font-size: 16px;
+    }
+
+    .section-heading p {
+        font-size: 11px;
+    }
+
+    .form-group label {
+        font-size: 12px;
+    }
+
+    .form-group input,
+    .form-group select {
+        height: 46px;
+        padding: 0 12px;
+
+        font-size: 13px;
+    }
+
+    .form-group textarea {
+        min-height: 130px;
+
+        padding: 11px 12px;
+
+        font-size: 13px;
+    }
+
+    .image-upload-box,
+    .image-preview {
+        min-height: 220px;
+    }
+
+    .image-preview img {
+        height: 200px;
+    }
+
+    .publish-button {
+        min-height: 50px;
+        font-size: 14px;
+    }
+
+}
+
+
+/* ==========================================================
+   VERY SMALL PHONES
+========================================================== */
+
+@media (max-width: 360px) {
+
+    .seller-container {
+        width: calc(100% - 14px);
+    }
+
+    .seller-header-inner {
+        width: calc(100% - 14px);
+    }
+
+    .seller-logo {
+        font-size: 17px;
+    }
+
+    .dashboard-link {
+        padding: 0 9px;
+        font-size: 11px;
+    }
+
+    .form-section {
+        padding: 16px 11px;
+    }
+
+    .section-heading h2 {
+        font-size: 15px;
+    }
+
+    .page-intro h1 {
+        font-size: 24px;
+    }
+
+}
+
+
+/* ==========================================================
+   GLOBAL OVERFLOW PROTECTION
+========================================================== */
+
+img,
+input,
+select,
+textarea,
+button,
+a {
+    max-width: 100%;
+}
+
+.form-section,
+.form-grid,
+.form-group,
+.image-upload-box,
+.image-preview,
+.variations-container,
+.variation-item {
+    min-width: 0;
+    max-width: 100%;
+}
+
+
+/* ==========================================================
+   PRODUCT VARIATIONS
+========================================================== */
+
+#productVariations {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   VARIATION CARD
+========================================================== */
+
+.variation-card {
+    width: 100%;
+    min-width: 0;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e3e6ea;
+    border-radius: 16px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ==========================================================
+   TOP AREA
+========================================================== */
+
+.variation-top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #eeeeee;
+    box-sizing: border-box;
+}
+
+
+.variation-title {
+    color: #171717;
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+
+/* ==========================================================
+   REMOVE BUTTON
+========================================================== */
+
+.remove-variation {
+    flex-shrink: 0;
+    min-height: 38px;
+    padding: 0 13px;
+    border: 1px solid #f0caca;
+    border-radius: 9px;
+    background: #fff5f5;
+    color: #c62828;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+}
+
+
+.remove-variation:hover {
+    background: #ffe9e9;
+    border-color: #e8aaaa;
+    transform: translateY(-1px);
+}
+
+
+.remove-variation:active {
+    transform: translateY(0);
+}
+
+
+/* ==========================================================
+   VARIATION GRID
+========================================================== */
+
+.variation-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 17px;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   FORM GROUP
+========================================================== */
+
+.variation-grid .form-group {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+
+.variation-grid .form-group.full {
+    grid-column: 1 / -1;
+}
+
+
+.variation-grid .form-group label:not(.variation-image-label) {
+    display: block;
+    margin-bottom: 8px;
+    color: #292929;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+
+/* ==========================================================
+   TEXT / NUMBER INPUTS
+========================================================== */
+
+.variation-grid input[type="text"],
+.variation-grid input[type="number"] {
+    width: 100%;
+    min-width: 0;
+    height: 48px;
+    padding: 0 13px;
+    border: 1px solid #dfe3e8;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #171717;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.variation-grid input[type="text"]:focus,
+.variation-grid input[type="number"]:focus {
+    border-color: #111111;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+
+.variation-grid input::placeholder {
+    color: #999999;
+}
+
+
+/* ==========================================================
+   PRICE INPUT WITH $
+========================================================== */
+
+.input-prefix {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #dfe3e8;
+    border-radius: 10px;
+    background: #ffffff;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition:
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.input-prefix:focus-within {
+    border-color: #111111;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+
+.input-prefix span {
+    height: 100%;
+    min-width: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #e5e5e5;
+    background: #f8f8f8;
+    color: #222222;
+    font-size: 14px;
+    font-weight: 800;
+    box-sizing: border-box;
+}
+
+
+.input-prefix input {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    height: 100% !important;
+    padding: 0 12px !important;
+    border: none !important;
+    border-radius: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+
+/* ==========================================================
+   VARIATION IMAGE LABEL
+========================================================== */
+
+.variation-image-label {
+    position: relative;
+    width: 100%;
+    min-height: 165px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    border: 2px dashed #d5d9de;
+    border-radius: 14px;
+    background: #fafafa;
+    color: #444444;
+    cursor: pointer;
+    box-sizing: border-box;
+    overflow: hidden;
+    transition:
+        border-color .2s ease,
+        background .2s ease,
+        transform .2s ease;
+}
+
+
+.variation-image-label:hover {
+    border-color: #999999;
+    background: #f6f6f6;
+}
+
+
+/* ==========================================================
+   IMAGE CONTENT
+========================================================== */
+
+.variation-image-content {
+    width: 100%;
+    min-height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+.variation-image-text {
+    color: #555555;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+
+.variation-image-text small {
+    color: #999999;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+
+/* ==========================================================
+   IMAGE PREVIEW
+   Works if initializeVariationImage() inserts an <img>
+========================================================== */
+
+.variation-image-content img {
+    display: block;
+    width: 140px;
+    height: 140px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #e1e1e1;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 700px) {
+
+    .variation-card {
+        padding: 15px;
+        border-radius: 13px;
+    }
+
+
+    .variation-top {
+        margin-bottom: 16px;
+    }
+
+
+    .variation-title {
+        font-size: 15px;
+    }
+
+
+    .variation-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+
+    .variation-grid .form-group.full {
+        grid-column: auto;
+    }
+
+
+    .variation-image-label {
+        min-height: 145px;
+    }
+
+
+    .variation-image-content {
+        min-height: 105px;
+    }
+
+}
+
+
+/* ==========================================================
+   SMALL PHONES
+========================================================== */
+
+@media (max-width: 380px) {
+
+    .variation-card {
+        padding: 12px;
+    }
+
+
+    .variation-top {
+        gap: 8px;
+    }
+
+
+    .variation-title {
+        font-size: 14px;
+    }
+
+
+    .remove-variation {
+        min-height: 34px;
+        padding: 0 9px;
+        font-size: 11px;
+    }
+
+
+    .variation-grid input[type="text"],
+    .variation-grid input[type="number"],
+    .input-prefix {
+        height: 46px;
+    }
+
+
+    .variation-image-label {
+        min-height: 130px;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE WIDTH PROTECTION
+========================================================== */
+
+#productVariations,
+.variation-card,
+.variation-top,
+.variation-grid,
+.variation-grid .form-group,
+.variation-image-label,
+.variation-image-content,
+.input-prefix {
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+

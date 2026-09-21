@@ -1,0 +1,688 @@
+<!-- ==========================================================
+     FILE: report-seller.html
+========================================================== -->
+
+
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Report Seller | ZONGO</title>
+    <style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left,#ffecec,transparent 35%),
+        radial-gradient(circle at bottom right,#e8f1ff,transparent 35%),
+        #f5f7fb;
+    color: #111;
+    min-height: 100vh;
+}
+
+.page {
+    max-width: 1000px;
+    margin: auto;
+    padding: 25px 15px 50px;
+}
+
+.hero {
+    text-align: center;
+    padding: 20px 10px 30px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 900;
+    margin-bottom: 22px;
+}
+
+.logo span {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    background: #111;
+    color: white;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+
+.badge {
+    display: inline-block;
+    background: #b00020;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: clamp(36px,7vw,55px);
+    letter-spacing: -2px;
+    margin-bottom: 13px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #687080;
+    line-height: 1.7;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 25px;
+    align-items: start;
+}
+
+.info,
+.form-card {
+    background: white;
+    border-radius: 23px;
+    padding: 30px;
+    box-shadow: 0 15px 45px rgba(0,0,0,.08);
+}
+
+.info h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.info > p {
+    color: #687080;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.warning {
+    background: #fff0f0;
+    color: #7d1828;
+    padding: 18px;
+    border-radius: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.reason {
+    padding: 15px;
+    background: #f7f9fc;
+    border-radius: 13px;
+    margin-bottom: 10px;
+}
+
+.reason strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.reason span {
+    color: #747b88;
+    font-size: 13px;
+}
+
+.form-card h2 {
+    font-size: 24px;
+    margin-bottom: 7px;
+}
+
+.form-intro {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 7px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 11px;
+    padding: 13px;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+    background: white;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #1769ff;
+    box-shadow: 0 0 0 4px rgba(23,105,255,.08);
+}
+
+button {
+    width: 100%;
+    border: 0;
+    border-radius: 11px;
+    padding: 15px;
+    background: #111;
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #b00020;
+}
+
+button:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+}
+
+.message {
+    display: none;
+    margin-top: 15px;
+    padding: 13px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.message.show {
+    display: block;
+}
+
+.message.success {
+    background: #e8fff0;
+    color: #08752c;
+}
+
+.message.error {
+    background: #ffe8e8;
+    color: #b00020;
+}
+
+.links {
+    text-align: center;
+    margin-top: 30px;
+    line-height: 2;
+}
+
+.links a {
+    color: #111;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0 8px;
+}
+
+.links a:hover {
+    color: #1769ff;
+}
+
+footer {
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+@media(max-width:800px) {
+
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media(max-width:550px) {
+
+    .info,
+    .form-card {
+        padding: 22px;
+        border-radius: 19px;
+    }
+
+}
+
+</style></head><body><div class="page"><header class="hero"><div class="logo">
+    <span>Z</span>ZONGO
+</div>
+
+<div class="badge">
+    ⚠️ REPORT A SELLER
+</div>
+
+<h1>
+    Help Keep ZONGO Safe
+</h1>
+
+<p>
+    If you believe a seller is violating ZONGO rules,
+    misleading buyers, posting inappropriate content or
+    behaving suspiciously, you can report them here.
+</p>
+
+</header><div class="layout"><section class="info"><h2>
+    When should you report a seller?
+</h2>
+
+<p>
+    Please use this form for genuine concerns. Your report
+    will be submitted to ZONGO for review.
+</p>
+
+
+<div class="warning">
+    <strong>🛡️ Safety reminder</strong>
+    <br>
+    Never share your password, verification code or other
+    sensitive account information in a seller report.
+</div>
+
+
+<div class="reason">
+
+    <strong>🚫 Misleading Listing</strong>
+
+    <span>
+        Product information appears false or intentionally misleading.
+    </span>
+
+</div>
+
+
+<div class="reason">
+
+    <strong>💬 Suspicious Behaviour</strong>
+
+    <span>
+        The seller appears to be behaving suspiciously toward buyers.
+    </span>
+
+</div>
+
+
+<div class="reason">
+
+    <strong>📦 Product Problem</strong>
+
+    <span>
+        Serious concerns about a seller's product listing.
+    </span>
+
+</div>
+
+
+<div class="reason">
+
+    <strong>🛑 Rule Violation</strong>
+
+    <span>
+        The seller appears to be violating ZONGO marketplace rules.
+    </span>
+
+</div>
+
+
+<div class="reason">
+
+    <strong>📢 Other Concern</strong>
+
+    <span>
+        Another issue that requires ZONGO's attention.
+    </span>
+
+</div>
+
+</section><section class="form-card"><h2>
+    Submit Report
+</h2>
+
+<p class="form-intro">
+    Please provide accurate information so our team can
+    understand and review the issue.
+</p>
+
+
+<form id="reportForm">
+
+
+    <div class="group">
+
+        <label for="sellerId">
+            Seller ID
+        </label>
+
+        <input
+            id="sellerId"
+            type="text"
+            required
+            placeholder="Enter seller ID"
+        >
+
+    </div>
+
+
+    <div class="group">
+
+        <label for="sellerName">
+            Seller / Store Name
+        </label>
+
+        <input
+            id="sellerName"
+            type="text"
+            required
+            placeholder="Enter seller or store name"
+        >
+
+    </div>
+
+
+    <div class="group">
+
+        <label for="reason">
+            Reason for Report
+        </label>
+
+        <select
+            id="reason"
+            required
+        >
+
+            <option value="">
+                Select a reason
+            </option>
+
+            <option value="Misleading Listing">
+                Misleading Listing
+            </option>
+
+            <option value="Suspicious Behaviour">
+                Suspicious Behaviour
+            </option>
+
+            <option value="Product Problem">
+                Product Problem
+            </option>
+
+            <option value="Rule Violation">
+                Rule Violation
+            </option>
+
+            <option value="Other Concern">
+                Other Concern
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div class="group">
+
+        <label for="reporterEmail">
+            Your Email Address
+        </label>
+
+        <input
+            id="reporterEmail"
+            type="email"
+            placeholder="Optional"
+            autocomplete="email"
+        >
+
+    </div>
+
+
+    <div class="group">
+
+        <label for="details">
+            Explain the Problem
+        </label>
+
+        <textarea
+            id="details"
+            required
+            placeholder="Please explain what happened..."
+        ></textarea>
+
+    </div>
+
+
+    <button
+        id="reportButton"
+        type="submit"
+    >
+        Submit Report
+    </button>
+
+
+    <div
+        id="message"
+        class="message"
+    ></div>
+
+
+</form>
+
+</section></div><div class="links"><a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+
+</div><footer>
+© 2026 ZONGO. All rights reserved.
+<br><br>
+zongo247customer.care@gmail.com
+<br>
+08109538280 · 08085995394
+</footer></div><script type="module">
+
+import {
+    db
+} from "./firebase.js";
+
+import {
+    addDoc,
+    collection,
+    serverTimestamp
+} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+
+
+const form =
+    document.getElementById(
+        "reportForm"
+    );
+
+
+const button =
+    document.getElementById(
+        "reportButton"
+    );
+
+
+const message =
+    document.getElementById(
+        "message"
+    );
+
+
+function showMessage(
+    text,
+    type
+) {
+
+    message.textContent =
+        text;
+
+    message.className =
+        `message show ${type}`;
+
+}
+
+
+form.addEventListener(
+    "submit",
+    async (event) => {
+
+        event.preventDefault();
+
+
+        const sellerId =
+            document
+                .getElementById("sellerId")
+                .value
+                .trim();
+
+
+        const sellerName =
+            document
+                .getElementById("sellerName")
+                .value
+                .trim();
+
+
+        const reason =
+            document
+                .getElementById("reason")
+                .value;
+
+
+        const reporterEmail =
+            document
+                .getElementById("reporterEmail")
+                .value
+                .trim();
+
+
+        const details =
+            document
+                .getElementById("details")
+                .value
+                .trim();
+
+
+        if (
+            !sellerId ||
+            !sellerName ||
+            !reason ||
+            !details
+        ) {
+
+            showMessage(
+                "Please complete all required fields.",
+                "error"
+            );
+
+            return;
+
+        }
+
+
+        button.disabled =
+            true;
+
+        button.textContent =
+            "Submitting report...";
+
+
+        try {
+
+            await addDoc(
+                collection(
+                    db,
+                    "reports"
+                ),
+                {
+
+                    sellerId:
+                        sellerId,
+
+                    sellerName:
+                        sellerName,
+
+                    reason:
+                        reason,
+
+                    reporterEmail:
+                        reporterEmail || null,
+
+                    details:
+                        details,
+
+                    status:
+                        "pending",
+
+                    createdAt:
+                        serverTimestamp()
+
+                }
+            );
+
+
+            showMessage(
+                "Your report has been submitted successfully. ZONGO will review the information.",
+                "success"
+            );
+
+
+            form.reset();
+
+
+        } catch (error) {
+
+            console.error(
+                error
+            );
+
+
+            showMessage(
+                "We could not submit your report. Please try again or contact ZONGO customer care.",
+                "error"
+            );
+
+        }
+
+
+        button.disabled =
+            false;
+
+        button.textContent =
+            "Submit Report";
+
+    }
+);
+
+</script></body>
+</html>
+
+

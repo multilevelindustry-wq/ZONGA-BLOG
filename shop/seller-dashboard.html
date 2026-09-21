@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- =====================================================
+         PRIVATE DASHBOARD — DO NOT INDEX
+    ====================================================== -->
+
+    <title>
+        Seller Dashboard | ZONGO
+    </title>
+
+    <meta
+        name="description"
+        content="Manage your ZONGO seller account, products, store information, reviews and seller settings."
+    >
+
+    <meta
+        name="robots"
+        content="noindex, nofollow, noarchive, nosnippet, noimageindex"
+    >
+
+    <meta
+        name="googlebot"
+        content="noindex, nofollow, noarchive, nosnippet, noimageindex"
+    >
+
+    <meta
+        name="bingbot"
+        content="noindex, nofollow, noarchive, nosnippet, noimageindex"
+    >
+
+    <meta
+        name="referrer"
+        content="strict-origin-when-cross-origin"
+    >
+
+    <meta
+        name="application-name"
+        content="ZONGO Marketplace"
+    >
+
+    <meta
+        name="theme-color"
+        content="#ffffff"
+    >
+
+
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="/images/zongo-logo.png"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="/images/zongo-logo.png"
+    >
+
+
+    <!-- =====================================================
+         PERFORMANCE
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    >
+
+
+    <!-- =====================================================
+         DASHBOARD
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="seller-dashboard.css"
+    >
+
+</head>
+<body>
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <header class="dashboard-header">
+
+        <div class="header-inner">
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                ZONGO
+            </a>
+
+            <button
+                type="button"
+                id="logoutButton"
+                class="logout-button"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==============================
+         MAIN
+    =============================== -->
+
+    <main class="dashboard-container">
+
+        <!-- Welcome -->
+
+        <section class="welcome-section">
+
+            <div>
+
+                <span class="welcome-label">
+                    Seller Dashboard
+                </span>
+
+                <h1>
+                    Welcome,
+                    <span id="sellerName">
+                        Seller
+                    </span>
+                </h1>
+
+                <p id="sellerEmail">
+                    Loading seller information...
+                </p>
+
+            </div>
+
+            <a
+                href="seller-upload.html"
+                class="upload-button"
+            >
+                + Upload Product
+            </a>
+
+        </section>
+
+
+        <!-- ==============================
+             STATISTICS
+        =============================== -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <span class="stat-icon">
+                    📦
+                </span>
+
+                <div>
+
+                    <span class="stat-label">
+                        Products
+                    </span>
+
+                    <strong id="productCount">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-icon">
+                    👁️
+                </span>
+
+                <div>
+
+                    <span class="stat-label">
+                        Total Views
+                    </span>
+
+                    <strong id="totalViews">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <span class="stat-icon">
+                    🟢
+                </span>
+
+                <div>
+
+                    <span class="stat-label">
+                        Active Products
+                    </span>
+
+                    <strong id="activeProducts">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             QUICK ACTIONS
+        =============================== -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        Quick Actions
+                    </span>
+
+                    <h2>
+                        Manage your store
+                    </h2>
+
+                </div>
+
+            </div>
+<button
+    type="button"
+    id="viewMyStoreButton"
+    class="view-my-store-button"
+>
+    🏪 View My Store
+</button>
+<br><br>
+
+            <div class="action-grid">
+
+                <a
+                    href="seller-upload.html"
+                    class="action-card primary-action"
+                >
+
+                    <span class="action-icon">
+                        ➕
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Upload Product
+                        </strong>
+
+                        <span>
+                            Add a new product
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="#myProducts"
+                    class="action-card"
+                >
+
+                    <span class="action-icon">
+                        📦
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            My Products
+                        </strong>
+
+                        <span>
+                            View your products
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="index.html"
+                    class="action-card"
+                >
+
+                    <span class="action-icon">
+                        🛍️
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Browse ZONGO
+                        </strong>
+
+                        <span>
+                            View marketplace
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             MY PRODUCTS
+        =============================== -->
+
+        <section
+            id="myProducts"
+            class="dashboard-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        Your Store
+                    </span>
+
+                    <h2>
+                        My Products
+                    </h2>
+
+                </div>
+
+                <a
+                    href="seller-upload.html"
+                    class="small-upload-button"
+                >
+                    + Add Product
+                </a>
+
+            </div>
+
+
+            <div
+                id="productsContainer"
+                class="products-container"
+            >
+
+                <div class="loading-message">
+                    Loading products...
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         SCRIPT
+    =============================== -->
+
+    <script
+        type="module"
+        src="seller-dashboard.js"
+    ></script>
+
+</body>
+</html>
+

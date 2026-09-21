@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sell a Product | ZONGA</title>
+
+    <meta
+        name="description"
+        content="Upload and sell your products on ZONGA."
+    >
+
+    <link
+        rel="stylesheet"
+        href="seller-upload.css"
+    >
+
+</head>
+<body>
+
+
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header class="seller-header">
+
+    <div class="seller-header-inner">
+
+        <a
+            href="index.html"
+            class="seller-logo"
+        >
+            ZONGA
+        </a>
+
+        <div class="seller-header-right">
+
+            <a
+                href="seller-dashboard.html"
+                class="dashboard-link"
+            >
+                Dashboard
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main class="seller-page">
+
+    <div class="seller-container">
+
+
+        <!-- =================================================
+             PAGE INTRO
+        ================================================== -->
+
+        <section class="page-intro">
+
+            <span class="intro-badge">
+                SELLER
+            </span>
+
+            <h1>
+                Upload a Product
+            </h1>
+
+            <p>
+                Add your product information, location,
+                contact details, images and variations.
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SELLER PROTECTION
+        ================================================== -->
+
+        <div
+            id="sellerProtectionMessage"
+            class="protection-message"
+        >
+
+            🔒 Seller account verification required
+
+        </div>
+
+
+
+        <!-- =================================================
+             FORM
+        ================================================== -->
+
+        <form
+            id="productUploadForm"
+            class="product-form"
+        >
+
+
+            <!-- =============================================
+                 SECTION 1 — PRODUCT INFORMATION
+            ============================================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        01
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Product Information
+                        </h2>
+
+                        <p>
+                            Tell buyers about your product.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group full">
+
+                        <label for="productName">
+                            Product Name
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="productName"
+                            name="productName"
+                            placeholder="e.g. Samsung Galaxy S25"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="category">
+                            Category
+                            <span>*</span>
+                        </label>
+
+                 <select
+    id="category"
+    name="category"
+    required
+>
+
+    <option value="">
+        Select category
+    </option>
+
+    <!-- =========================
+         PHONES & COMPUTERS
+    ========================== -->
+
+    <option value="phones-smartphones">
+        Phones & Smartphones
+    </option>
+
+    <option value="laptops">
+        Laptops
+    </option>
+
+    <option value="tablets">
+        Tablets
+    </option>
+
+    <option value="mobile-accessories">
+        Mobile Accessories
+    </option>
+
+    <option value="computers">
+        Computers
+    </option>
+
+    <option value="computer-accessories">
+        Computer Accessories
+    </option>
+
+    <option value="televisions">
+        Televisions
+    </option>
+
+    <option value="audio-speakers">
+        Audio & Speakers
+    </option>
+
+    <option value="headphones">
+        Headphones
+    </option>
+
+    <option value="cameras">
+        Cameras
+    </option>
+
+
+    <!-- =========================
+         FASHION
+    ========================== -->
+
+    <option value="mens-fashion">
+        Men's Fashion
+    </option>
+
+    <option value="womens-fashion">
+        Women's Fashion
+    </option>
+
+    <option value="childrens-fashion">
+        Children's Fashion
+    </option>
+
+    <option value="shoes">
+        Shoes
+    </option>
+
+    <option value="sneakers">
+        Sneakers
+    </option>
+
+    <option value="bags">
+        Bags
+    </option>
+
+    <option value="watches">
+        Watches
+    </option>
+
+    <option value="jewelry">
+        Jewelry
+    </option>
+
+    <option value="sunglasses">
+        Sunglasses
+    </option>
+
+    <option value="underwear">
+        Underwear
+    </option>
+
+
+    <!-- =========================
+         BEAUTY & PERSONAL CARE
+    ========================== -->
+
+    <option value="beauty">
+        Beauty
+    </option>
+
+    <option value="skincare">
+        Skincare
+    </option>
+
+    <option value="hair-care">
+        Hair Care
+    </option>
+
+    <option value="makeup">
+        Makeup
+    </option>
+
+    <option value="perfumes">
+        Perfumes
+    </option>
+
+    <option value="mens-grooming">
+        Men's Grooming
+    </option>
+
+    <option value="bath-body">
+        Bath & Body
+    </option>
+
+    <option value="personal-care">
+        Personal Care
+    </option>
+
+    <option value="hair-extensions">
+        Hair Extensions
+    </option>
+
+    <option value="nail-care">
+        Nail Care
+    </option>
+
+
+    <!-- =========================
+         HOME & LIVING
+    ========================== -->
+
+    <option value="home-living">
+        Home & Living
+    </option>
+
+    <option value="furniture">
+        Furniture
+    </option>
+
+    <option value="bedroom">
+        Bedroom
+    </option>
+
+    <option value="kitchen">
+        Kitchen
+    </option>
+
+    <option value="dining">
+        Dining
+    </option>
+
+    <option value="bathroom">
+        Bathroom
+    </option>
+
+    <option value="home-decor">
+        Home Decor
+    </option>
+
+    <option value="lighting">
+        Lighting
+    </option>
+
+    <option value="curtains">
+        Curtains
+    </option>
+
+    <option value="storage-organization">
+        Storage & Organization
+    </option>
+
+
+    <!-- =========================
+         APPLIANCES
+    ========================== -->
+
+    <option value="appliances">
+        Appliances
+    </option>
+
+    <option value="refrigerators">
+        Refrigerators
+    </option>
+
+    <option value="washing-machines">
+        Washing Machines
+    </option>
+
+    <option value="microwaves">
+        Microwaves
+    </option>
+
+    <option value="blenders">
+        Blenders
+    </option>
+
+    <option value="air-conditioners">
+        Air Conditioners
+    </option>
+
+    <option value="fans">
+        Fans
+    </option>
+
+    <option value="cookers">
+        Cookers
+    </option>
+
+    <option value="coffee-machines">
+        Coffee Machines
+    </option>
+
+    <option value="vacuum-cleaners">
+        Vacuum Cleaners
+    </option>
+
+
+    <!-- =========================
+         AUTOMOTIVE
+    ========================== -->
+
+    <option value="automotive">
+        Automotive
+    </option>
+
+    <option value="car-accessories">
+        Car Accessories
+    </option>
+
+    <option value="car-parts">
+        Car Parts
+    </option>
+
+    <option value="motorcycles">
+        Motorcycles
+    </option>
+
+    <option value="motorcycle-accessories">
+        Motorcycle Accessories
+    </option>
+
+    <option value="tyres-wheels">
+        Tyres & Wheels
+    </option>
+
+    <option value="tools">
+        Tools
+    </option>
+
+    <option value="car-electronics">
+        Car Electronics
+    </option>
+
+    <option value="car-care">
+        Car Care
+    </option>
+
+    <option value="vehicle-lighting">
+        Vehicle Lighting
+    </option>
+
+
+    <!-- =========================
+         HEALTH & FITNESS
+    ========================== -->
+
+    <option value="health">
+        Health
+    </option>
+
+    <option value="vitamins">
+        Vitamins
+    </option>
+
+    <option value="supplements">
+        Supplements
+    </option>
+
+    <option value="medical-equipment">
+        Medical Equipment
+    </option>
+
+    <option value="fitness">
+        Fitness
+    </option>
+
+    <option value="exercise-equipment">
+        Exercise Equipment
+    </option>
+
+    <option value="sportswear">
+        Sportswear
+    </option>
+
+    <option value="running">
+        Running
+    </option>
+
+    <option value="cycling">
+        Cycling
+    </option>
+
+    <option value="outdoor-sports">
+        Outdoor Sports
+    </option>
+
+
+    <!-- =========================
+         BABY, TOYS & EDUCATION
+    ========================== -->
+
+    <option value="baby-products">
+        Baby Products
+    </option>
+
+    <option value="baby-clothing">
+        Baby Clothing
+    </option>
+
+    <option value="baby-feeding">
+        Baby Feeding
+    </option>
+
+    <option value="baby-toys">
+        Baby Toys
+    </option>
+
+    <option value="toys">
+        Toys
+    </option>
+
+    <option value="games">
+        Games
+    </option>
+
+    <option value="educational-toys">
+        Educational Toys
+    </option>
+
+    <option value="school-supplies">
+        School Supplies
+    </option>
+
+    <option value="books">
+        Books
+    </option>
+
+    <option value="musical-instruments">
+        Musical Instruments
+    </option>
+
+
+    <!-- =========================
+         GROCERIES & FOOD
+    ========================== -->
+
+    <option value="groceries">
+        Groceries
+    </option>
+
+    <option value="food">
+        Food
+    </option>
+
+    <option value="beverages">
+        Beverages
+    </option>
+
+    <option value="snacks">
+        Snacks
+    </option>
+
+    <option value="fresh-produce">
+        Fresh Produce
+    </option>
+
+    <option value="meat-seafood">
+        Meat & Seafood
+    </option>
+
+    <option value="bakery">
+        Bakery
+    </option>
+
+    <option value="cooking-ingredients">
+        Cooking Ingredients
+    </option>
+
+    <option value="pet-supplies">
+        Pet Supplies
+    </option>
+
+    <option value="office-supplies">
+        Office Supplies
+    </option>
+
+
+    <!-- =========================
+         BUSINESS & INDUSTRIAL
+    ========================== -->
+
+    <option value="industrial-equipment">
+        Industrial Equipment
+    </option>
+
+    <option value="agricultural-equipment">
+        Agricultural Equipment
+    </option>
+
+    <option value="farm-products">
+        Farm Products
+    </option>
+
+    <option value="construction">
+        Construction
+    </option>
+
+    <option value="electrical-equipment">
+        Electrical Equipment
+    </option>
+
+    <option value="security-equipment">
+        Security Equipment
+    </option>
+
+    <option value="solar-products">
+        Solar Products
+    </option>
+
+    <option value="generators">
+        Generators
+    </option>
+
+    <option value="business-equipment">
+        Business Equipment
+    </option>
+
+
+    <!-- =========================
+         OTHER
+    ========================== -->
+
+    <option value="other-products">
+        Other Products
+    </option>
+
+</select>
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="condition">
+                            Condition
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="condition"
+                            name="condition"
+                            required
+                        >
+
+                            <option value="">
+                                Select condition
+                            </option>
+
+                            <option value="new">
+                                New
+                            </option>
+
+                            <option value="used">
+                                Used
+                            </option>
+
+                            <option value="refurbished">
+                                Refurbished
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-group full">
+
+                        <label for="description">
+                            Product Description
+                            <span>*</span>
+                        </label>
+
+                        <textarea
+                            id="description"
+                            name="description"
+                            rows="7"
+                            placeholder="Describe your product, features, condition and anything buyers should know..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 SECTION 2 — MAIN PRODUCT IMAGE
+            ============================================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Main Product Image
+                        </h2>
+
+                        <p>
+                            Upload one main image for your product.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="main-image-upload">
+
+                    <label
+                        for="mainProductImage"
+                        class="image-upload-box"
+                    >
+
+                        <div
+                            id="mainImagePreview"
+                            class="image-preview"
+                        >
+
+                            <span class="upload-icon">
+                                📷
+                            </span>
+
+                            <strong>
+                                Add Main Image
+                            </strong>
+
+                            <small>
+                                JPG, PNG or WEBP
+                            </small>
+
+                        </div>
+
+                    </label>
+
+
+                    <input
+                        type="file"
+                        id="mainProductImage"
+                        accept="image/jpeg,image/png,image/webp"
+                        hidden
+                        required
+                    >
+
+                    <p class="upload-note">
+                        This image will be displayed as the main
+                        product image.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 SECTION 3 — PRICE & INVENTORY
+            ============================================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Price & Inventory
+                        </h2>
+
+                        <p>
+                            Set your selling price and stock.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="price">
+                            Price
+                            <span>*</span>
+                        </label>
+
+                        <div class="input-prefix">
+
+                            <span>
+                                $
+                            </span>
+
+                            <input
+                                type="number"
+                                id="price"
+                                name="price"
+                                min="0"
+                                step="0.01"
+                                placeholder="0.00"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="stock">
+                            Available Stock
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="number"
+                            id="stock"
+                            name="stock"
+                            min="1"
+                            placeholder="e.g. 10"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="sku">
+                            Product SKU
+                        </label>
+
+                        <input
+                            type="text"
+                            id="sku"
+                            name="sku"
+                            placeholder="Optional SKU"
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="weight">
+                            Weight (kg)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="weight"
+                            name="weight"
+                            min="0"
+                            step="0.01"
+                            placeholder="e.g. 1.5"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 SECTION 4 — LOCATION
+            ============================================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        04
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Product Location
+                        </h2>
+
+                        <p>
+                            Tell buyers where this product is located.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="country">
+                            Country
+                            <span>*</span>
+                        </label>
+
+                        <select
+    id="country"
+    name="country"
+    required
+>
+
+    <option value="">
+        Select country
+    </option>
+
+    <option value="AF">Afghanistan</option>
+    <option value="AL">Albania</option>
+    <option value="DZ">Algeria</option>
+    <option value="AD">Andorra</option>
+    <option value="AO">Angola</option>
+    <option value="AG">Antigua and Barbuda</option>
+    <option value="AR">Argentina</option>
+    <option value="AM">Armenia</option>
+    <option value="AU">Australia</option>
+    <option value="AT">Austria</option>
+    <option value="AZ">Azerbaijan</option>
+
+    <option value="BS">Bahamas</option>
+    <option value="BH">Bahrain</option>
+    <option value="BD">Bangladesh</option>
+    <option value="BB">Barbados</option>
+    <option value="BY">Belarus</option>
+    <option value="BE">Belgium</option>
+    <option value="BZ">Belize</option>
+    <option value="BJ">Benin</option>
+    <option value="BT">Bhutan</option>
+    <option value="BO">Bolivia</option>
+    <option value="BA">Bosnia and Herzegovina</option>
+    <option value="BW">Botswana</option>
+    <option value="BR">Brazil</option>
+    <option value="BN">Brunei</option>
+    <option value="BG">Bulgaria</option>
+    <option value="BF">Burkina Faso</option>
+    <option value="BI">Burundi</option>
+
+    <option value="CV">Cabo Verde</option>
+    <option value="KH">Cambodia</option>
+    <option value="CM">Cameroon</option>
+    <option value="CA">Canada</option>
+    <option value="CF">Central African Republic</option>
+    <option value="TD">Chad</option>
+    <option value="CL">Chile</option>
+    <option value="CN">China</option>
+    <option value="CO">Colombia</option>
+    <option value="KM">Comoros</option>
+    <option value="CG">Congo</option>
+    <option value="CD">Democratic Republic of the Congo</option>
+    <option value="CR">Costa Rica</option>
+    <option value="CI">Côte d'Ivoire</option>
+    <option value="HR">Croatia</option>
+    <option value="CU">Cuba</option>
+    <option value="CY">Cyprus</option>
+    <option value="CZ">Czechia</option>
+
+    <option value="DK">Denmark</option>
+    <option value="DJ">Djibouti</option>
+    <option value="DM">Dominica</option>
+    <option value="DO">Dominican Republic</option>
+
+    <option value="EC">Ecuador</option>
+    <option value="EG">Egypt</option>
+    <option value="SV">El Salvador</option>
+    <option value="GQ">Equatorial Guinea</option>
+    <option value="ER">Eritrea</option>
+    <option value="EE">Estonia</option>
+    <option value="SZ">Eswatini</option>
+    <option value="ET">Ethiopia</option>
+
+    <option value="FJ">Fiji</option>
+    <option value="FI">Finland</option>
+    <option value="FR">France</option>
+
+    <option value="GA">Gabon</option>
+    <option value="GM">Gambia</option>
+    <option value="GE">Georgia</option>
+    <option value="DE">Germany</option>
+    <option value="GH">Ghana</option>
+    <option value="GR">Greece</option>
+    <option value="GD">Grenada</option>
+    <option value="GT">Guatemala</option>
+    <option value="GN">Guinea</option>
+    <option value="GW">Guinea-Bissau</option>
+    <option value="GY">Guyana</option>
+
+    <option value="HT">Haiti</option>
+    <option value="HN">Honduras</option>
+    <option value="HU">Hungary</option>
+
+    <option value="IS">Iceland</option>
+    <option value="IN">India</option>
+    <option value="ID">Indonesia</option>
+    <option value="IR">Iran</option>
+    <option value="IQ">Iraq</option>
+    <option value="IE">Ireland</option>
+    <option value="IL">Israel</option>
+    <option value="IT">Italy</option>
+
+    <option value="JM">Jamaica</option>
+    <option value="JP">Japan</option>
+    <option value="JO">Jordan</option>
+
+    <option value="KZ">Kazakhstan</option>
+    <option value="KE">Kenya</option>
+    <option value="KI">Kiribati</option>
+    <option value="KP">North Korea</option>
+    <option value="KR">South Korea</option>
+    <option value="KW">Kuwait</option>
+    <option value="KG">Kyrgyzstan</option>
+
+    <option value="LA">Laos</option>
+    <option value="LV">Latvia</option>
+    <option value="LB">Lebanon</option>
+    <option value="LS">Lesotho</option>
+    <option value="LR">Liberia</option>
+    <option value="LY">Libya</option>
+    <option value="LI">Liechtenstein</option>
+    <option value="LT">Lithuania</option>
+    <option value="LU">Luxembourg</option>
+
+    <option value="MG">Madagascar</option>
+    <option value="MW">Malawi</option>
+    <option value="MY">Malaysia</option>
+    <option value="MV">Maldives</option>
+    <option value="ML">Mali</option>
+    <option value="MT">Malta</option>
+    <option value="MH">Marshall Islands</option>
+    <option value="MR">Mauritania</option>
+    <option value="MU">Mauritius</option>
+    <option value="MX">Mexico</option>
+    <option value="FM">Micronesia</option>
+    <option value="MD">Moldova</option>
+    <option value="MC">Monaco</option>
+    <option value="MN">Mongolia</option>
+    <option value="ME">Montenegro</option>
+    <option value="MA">Morocco</option>
+    <option value="MZ">Mozambique</option>
+    <option value="MM">Myanmar</option>
+
+    <option value="NA">Namibia</option>
+    <option value="NR">Nauru</option>
+    <option value="NP">Nepal</option>
+    <option value="NL">Netherlands</option>
+    <option value="NZ">New Zealand</option>
+    <option value="NI">Nicaragua</option>
+    <option value="NE">Niger</option>
+    <option value="NG">Nigeria</option>
+    <option value="MK">North Macedonia</option>
+    <option value="NO">Norway</option>
+
+    <option value="OM">Oman</option>
+
+    <option value="PK">Pakistan</option>
+    <option value="PW">Palau</option>
+    <option value="PA">Panama</option>
+    <option value="PG">Papua New Guinea</option>
+    <option value="PY">Paraguay</option>
+    <option value="PE">Peru</option>
+    <option value="PH">Philippines</option>
+    <option value="PL">Poland</option>
+    <option value="PT">Portugal</option>
+
+    <option value="QA">Qatar</option>
+
+    <option value="RO">Romania</option>
+    <option value="RU">Russia</option>
+    <option value="RW">Rwanda</option>
+
+    <option value="KN">Saint Kitts and Nevis</option>
+    <option value="LC">Saint Lucia</option>
+    <option value="VC">Saint Vincent and the Grenadines</option>
+    <option value="WS">Samoa</option>
+    <option value="SM">San Marino</option>
+    <option value="ST">São Tomé and Príncipe</option>
+    <option value="SA">Saudi Arabia</option>
+    <option value="SN">Senegal</option>
+    <option value="RS">Serbia</option>
+    <option value="SC">Seychelles</option>
+    <option value="SL">Sierra Leone</option>
+    <option value="SG">Singapore</option>
+    <option value="SK">Slovakia</option>
+    <option value="SI">Slovenia</option>
+    <option value="SB">Solomon Islands</option>
+    <option value="SO">Somalia</option>
+    <option value="ZA">South Africa</option>
+    <option value="SS">South Sudan</option>
+    <option value="ES">Spain</option>
+    <option value="LK">Sri Lanka</option>
+    <option value="SD">Sudan</option>
+    <option value="SR">Suriname</option>
+    <option value="SE">Sweden</option>
+    <option value="CH">Switzerland</option>
+    <option value="SY">Syria</option>
+
+    <option value="TW">Taiwan</option>
+    <option value="TJ">Tajikistan</option>
+    <option value="TZ">Tanzania</option>
+    <option value="TH">Thailand</option>
+    <option value="TL">Timor-Leste</option>
+    <option value="TG">Togo</option>
+    <option value="TO">Tonga</option>
+    <option value="TT">Trinidad and Tobago</option>
+    <option value="TN">Tunisia</option>
+    <option value="TR">Turkey</option>
+    <option value="TM">Turkmenistan</option>
+    <option value="TV">Tuvalu</option>
+
+    <option value="UG">Uganda</option>
+    <option value="UA">Ukraine</option>
+    <option value="AE">United Arab Emirates</option>
+    <option value="GB">United Kingdom</option>
+    <option value="US">United States</option>
+    <option value="UY">Uruguay</option>
+    <option value="UZ">Uzbekistan</option>
+
+    <option value="VU">Vanuatu</option>
+    <option value="VA">Vatican City</option>
+    <option value="VE">Venezuela</option>
+    <option value="VN">Vietnam</option>
+
+    <option value="YE">Yemen</option>
+
+    <option value="ZM">Zambia</option>
+    <option value="ZW">Zimbabwe</option>
+    
+
+</select>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="region">
+                            State / Region
+                            <span>*</span>
+                        </label>
+
+                        <select
+                            id="region"
+                            name="region"
+                            required
+                        >
+
+                            <option value="">
+                                Select country first
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="city">
+                            City
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="city"
+                            name="city"
+                            placeholder="Enter city"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="area">
+                            Area / Town
+                        </label>
+
+                        <input
+                            type="text"
+                            id="area"
+                            name="area"
+                            placeholder="Optional"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 SECTION 5 — CONTACT INFORMATION
+            ============================================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        05
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Seller Contact
+                        </h2>
+
+                        <p>
+                            Exactly two phone numbers are required.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-warning">
+
+                    📞 Buyers can use these details to contact
+                    you about this product.
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="phone1">
+                            Phone Number 1
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone1"
+                            name="phone1"
+                            placeholder="e.g. 08012345678"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="phone2">
+                            Phone Number 2
+                            <span>*</span>
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone2"
+                            name="phone2"
+                            placeholder="e.g. 08123456789"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="whatsapp">
+                            WhatsApp
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="whatsapp"
+                            name="whatsapp"
+                            placeholder="WhatsApp number"
+                        >
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="telegram">
+                            Telegram
+                        </label>
+
+                        <input
+                            type="text"
+                            id="telegram"
+                            name="telegram"
+                            placeholder="@username"
+                        >
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 SECTION 6 — VARIATIONS
+            ============================================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        06
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Product Variations
+                        </h2>
+
+                        <p>
+                            Add sizes, colors, storage options or
+                            other variations.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="variation-info">
+
+                    <strong>
+                        📸 Upload Your Items Variations images 
+                    </strong>
+
+                </div>
+
+
+                <div
+                    id="productVariations"
+                    class="variations-container"
+                >
+                </div>
+
+
+                <button
+                    type="button"
+                    id="addVariationButton"
+                    class="add-variation-button"
+                >
+                    + Add Variation
+                </button>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 SECTION 7 — DELIVERY
+            ============================================== -->
+
+            <section class="form-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        07
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Delivery Information
+                        </h2>
+
+                        <p>
+                            Provide basic delivery information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <div class="form-group">
+
+                        <label for="deliveryType">
+                            Delivery Type
+                        </label>
+
+                        <select
+                            id="deliveryType"
+                            name="deliveryType"
+                        >
+
+                            <option value="seller_delivery">
+                                Seller Delivery
+                            </option>
+
+                            <option value="pickup">
+                                Pickup
+                            </option>
+
+                            <option value="both">
+                                Delivery & Pickup
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <div class="form-group">
+
+                        <label for="deliveryTime">
+                            Delivery Time
+                        </label>
+
+                        <select
+                            id="deliveryTime"
+                            name="deliveryTime"
+                        >
+
+                            <option value="">
+                                Select
+                            </option>
+
+                            <option value="same_day">
+                                Same Day
+                            </option>
+
+                            <option value="1_2_days">
+                                1–2 Days
+                            </option>
+
+                            <option value="3_5_days">
+                                3–5 Days
+                            </option>
+
+                            <option value="1_week">
+                                About 1 Week
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =============================================
+                 SECTION 8 — REVIEW
+            ============================================== -->
+
+            <section class="form-section review-section">
+
+                <div class="section-heading">
+
+                    <span class="section-number">
+                        08
+                    </span>
+
+                    <div>
+
+                        <h2>
+                            Ready to Publish?
+                        </h2>
+
+                        <p>
+                            Check your information before uploading.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <label class="terms-check">
+
+                    <input
+                        type="checkbox"
+                        id="sellerAgreement"
+                        required
+                    >
+
+                    <span>
+                        I confirm that the information provided is
+                        accurate and I have the right to sell this
+                        product.
+                    </span>
+
+                </label>
+
+
+                <div
+                    id="uploadStatus"
+                    class="upload-status"
+                >
+                </div>
+
+
+                <button
+                    type="submit"
+                    id="publishProductButton"
+                    class="publish-button"
+                >
+
+                    <span>
+                        Publish Product
+                    </span>
+
+                </button>
+
+            </section>
+
+
+        </form>
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script
+    type="module"
+    src="seller-upload.js"
+></script>
+
+
+</body>
+
+</html>

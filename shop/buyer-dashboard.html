@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Buyer Dashboard | ZONGO</title>
+
+    <link
+        rel="stylesheet"
+        href="buyer-dashboard.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <header class="dashboard-header">
+
+        <div class="header-inner">
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                ZONGO
+            </a>
+
+            <button
+                type="button"
+                id="logoutButton"
+                class="logout-button"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==============================
+         MAIN
+    =============================== -->
+
+    <main class="dashboard-container">
+
+        <section class="welcome-section">
+
+            <span class="welcome-label">
+                Buyer Dashboard
+            </span>
+
+            <h1>
+                Welcome,
+                <span id="buyerName">
+                    Buyer
+                </span>
+            </h1>
+
+            <p id="buyerEmail">
+                Loading your account...
+            </p>
+
+        </section>
+
+
+        <!-- ==============================
+             QUICK ACTIONS
+        =============================== -->
+
+        <section class="dashboard-section">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    Quick Actions
+                </span>
+
+                <h2>
+                    Start shopping
+                </h2>
+
+            </div>
+
+
+            <div class="action-grid">
+
+                <a
+                    href="index.html"
+                    class="action-card primary-action"
+                >
+
+                    <span class="action-icon">
+                        🛍️
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Browse Products
+                        </strong>
+
+                        <span>
+                            Explore ZONGO
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="category.html"
+                    class="action-card"
+                >
+
+                    <span class="action-icon">
+                        📂
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Categories
+                        </strong>
+
+                        <span>
+                            Find products by category
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="chat.html"
+                    class="action-card"
+                >
+
+                    <span class="action-icon">
+                        💬
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Chat
+                        </strong>
+
+                        <span>
+                            Contact sellers
+                        </span>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+             ACCOUNT
+        =============================== -->
+
+        <section class="account-card">
+
+            <div>
+
+                <span class="section-label">
+                    Account
+                </span>
+
+                <h2>
+                    Your ZONGO Account
+                </h2>
+
+                <p>
+                    Manage your account and continue
+                    browsing products on ZONGO.
+                </p>
+
+            </div>
+
+
+            <div class="account-actions">
+
+                <a
+                    href="index.html"
+                    class="account-button"
+                >
+                    Continue Shopping
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="buyer-dashboard.js"
+    ></script>
+
+</body>
+</html>
+
