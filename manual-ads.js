@@ -132,15 +132,15 @@
             advertiser: "Example Business",
             title: "Explore Something Different",
             description:
-                "See what is available and discover something useful today.",
+                "The markets are unpredictable. Trade with no hidden fees and spreads that remain tight and stable.",
             image:
-                "https://via.placeholder.com/800x450",
+                "https://www.image2url.com/r2/default/images/1790108189076-48878b08-5dd4-4f73-94f4-4ac65671f2ea.png",
             avatar:
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSspLNBdaFwS1GRfTP4AiDIQSQfFIhE-QbP7fj-bmz6Iw&s",
             url:
-                "https://example.com",
+                "https://one.exnessonelink.com/a/7qdzr2fcx4",
             button:
-                "Explore"
+                "Get 50% increase"
         },
 
 
@@ -179,15 +179,15 @@
         advertiser: "Zongo",
             title: "Discover More on Zongo",
             description:
-                "Explore useful stories, products, guides and discoveries on Zongo.",
+                "Trade with no hidden fees and spreads that remain tight and stable.",
             image:
-                "https://via.placeholder.com/800x450",
+                "https://www.image2url.com/r2/default/images/1790108048723-35b7a1aa-8247-4b07-881a-af20ecbf081c.png",
             avatar:
                 "https://via.placeholder.com/80",
             url:
-                "https://zongo.shop",
+                "https://one.exnessonelink.com/a/7qdzr2fcx4",
             button:
-                "Learn Mores"
+                "$1 only"
         },
 
 
