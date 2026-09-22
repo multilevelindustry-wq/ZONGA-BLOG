@@ -48,18 +48,18 @@
 
 
         {
-            advertiser: "Example Store",
+            advertiser: "XiaoMi Samsung Store",
             title: "Discover New Products",
             description:
-                "Find products and services that match what you are looking for.",
+                "New P47 TWS Headset Bluetooth Headset Folding Series Wireless Sports Game Stereo Headset for iPhone Huawei ",
             image:
-                "https://via.placeholder.com/800x450",
+                "https://ae-pic-a1.aliexpress-media.com/kf/S5f1e4918f5784cbfb63e3a3622ca986co.jpg",
             avatar:
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSspLNBdaFwS1GRfTP4AiDIQSQfFIhE-QbP7fj-bmz6Iw&s",
             url:
-                "https://example.com",
+                "https://s.click.aliexpress.com/e/_ExfNbzy",
             button:
-                "Shop Now"
+                 "Buy $5.28"
         },
 
 
