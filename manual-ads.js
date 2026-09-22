@@ -43,7 +43,7 @@
             url:
                 "https://s.click.aliexpress.com/e/_EJxL1BY",
             button:
-                "Buy $3.55"
+                "Get $4.03"
         },
 
 
@@ -64,18 +64,18 @@
 
 
         {
-            advertiser: "Example Brand",
+            advertiser: "AliExpress Store",
             title: "Something New Is Waiting",
             description:
-                "Explore this offer and learn more about what is available.",
+                "New Z906 Mini FPV Drone Big Screen Remote Electric Adjust 4K Camera 3-Side Obstacle Avoidance Optical Flow Sale Landing Pad Only",
             image:
-                "https://via.placeholder.com/800x450",
+                "https://ae-pic-a1.aliexpress-media.com/kf/S5a3158cb72034c58bb83d3b6d928a932N.jpg",
             avatar:
-                "https://via.placeholder.com/80",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSspLNBdaFwS1GRfTP4AiDIQSQfFIhE-QbP7fj-bmz6Iw&s",
             url:
-                "https://example.com",
+                "https://s.click.aliexpress.com/e/_EJqOzUw",
             button:
-                "Learn More"
+                "Only $3.85"
         },
 
 
