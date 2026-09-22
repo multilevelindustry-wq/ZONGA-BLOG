@@ -16,18 +16,18 @@
     const MANUAL_ADS = [
 
         {
-            advertiser: "Zongo",
-            title: "Discover More on Zongo",
+            advertiser: "AliExpress Store",
+            title: "Shop On AliExpress",
             description:
-                "Explore useful stories, products, guides and discoveries on Zongo.",
+                "Smartwatch Men Women Wristwatches Smart Watch Message Fitness Monitor Bracelet Birthday Gift Electronic Clock For Android IOS",
             image:
-                "https://via.placeholder.com/800x450",
+                "https://ae-pic-a1.aliexpress-media.com/kf/S0dca4f85065b4641b45702880d1a32723.jpg",
             avatar:
-                "https://via.placeholder.com/80",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSspLNBdaFwS1GRfTP4AiDIQSQfFIhE-QbP7fj-bmz6Iw&s",
             url:
-                "https://zongo.shop",
+                "https://s.click.aliexpress.com/e/_EyUElCa",
             button:
-                "Learn More"
+                "Buy $3.55"
         },
 
 
@@ -55,7 +55,7 @@
             image:
                 "https://via.placeholder.com/800x450",
             avatar:
-                "https://via.placeholder.com/80",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSspLNBdaFwS1GRfTP4AiDIQSQfFIhE-QbP7fj-bmz6Iw&s",
             url:
                 "https://example.com",
             button:
@@ -135,7 +135,7 @@
             image:
                 "https://via.placeholder.com/800x450",
             avatar:
-                "https://via.placeholder.com/80",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSspLNBdaFwS1GRfTP4AiDIQSQfFIhE-QbP7fj-bmz6Iw&s",
             url:
                 "https://example.com",
             button:
@@ -214,7 +214,7 @@
             image:
                 "https://via.placeholder.com/800x450",
             avatar:
-                "https://via.placeholder.com/80",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSspLNBdaFwS1GRfTP4AiDIQSQfFIhE-QbP7fj-bmz6Iw&s",
             url:
                 "https://example.com",
             button:
@@ -262,7 +262,7 @@
             image:
                 "https://via.placeholder.com/800x450",
             avatar:
-                "https://via.placeholder.com/80",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSspLNBdaFwS1GRfTP4AiDIQSQfFIhE-QbP7fj-bmz6Iw&s",
             url:
                 "https://example.com",
             button:
