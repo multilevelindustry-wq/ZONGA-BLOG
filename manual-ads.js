@@ -32,18 +32,18 @@
 
 
         {
-            advertiser: "Example Business",
-            title: "Grow Your Business Online",
+            advertiser: "AliExpress Store",
+            title: "Shop On AliExpress",
             description:
-                "Reach more customers and discover new opportunities today.",
+                "Stereo P47 Headset 5.0 Bluetooth Headset Folding Series Wireless Sports Game Headset for iPhone XiaoMi",
             image:
-                "https://via.placeholder.com/800x450",
+                "https://ae-pic-a1.aliexpress-media.com/kf/S155961da97074a83b82badd40f86d7107.jpg",
             avatar:
-                "https://via.placeholder.com/80",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSspLNBdaFwS1GRfTP4AiDIQSQfFIhE-QbP7fj-bmz6Iw&s",
             url:
-                "https://example.com",
+                "https://s.click.aliexpress.com/e/_EJxL1BY",
             button:
-                "Visit Website"
+                "Buy $3.55"
         },
 
 
@@ -80,19 +80,20 @@
 
 
         {
-            advertiser: "Example Company",
-            title: "Find What You Need",
+            advertiser: "AliExpress Store",
+            title: "Shop On AliExpress",
             description:
-                "Discover useful products, services and opportunities online.",
+                "Stereo P47 Headset 5.0 Bluetooth Headset Folding Series Wireless Sports Game Headset for iPhone XiaoMi",
             image:
-                "https://via.placeholder.com/800x450",
+                "https://ae-pic-a1.aliexpress-media.com/kf/S155961da97074a83b82badd40f86d7107.jpg",
             avatar:
-                "https://via.placeholder.com/80",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSspLNBdaFwS1GRfTP4AiDIQSQfFIhE-QbP7fj-bmz6Iw&s",
             url:
-                "https://example.com",
+                "https://s.click.aliexpress.com/e/_EJxL1BY",
             button:
-                "Discover"
+                "Buy $3.55"
         },
+
 
 
         {
