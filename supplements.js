@@ -12,16 +12,16 @@ const supplementPosts = [
             "Are supplements safe",
 
         description:
-            "Learn about vitamin C, its role in normal body functions, dietary sources and what to consider when choosing a supplement.",
+            "Are Supplements Safe? What the Medical Evidence Really Says.",
 
         image:
             "https://images.unsplash.com/photo-1616671276441-2f6c7e3f5f3a?auto=format&fit=crop&w=900&q=85",
 
         alt:
-            "Vitamin C supplement capsules and citrus fruits",
+            "Supplements can provide important nutrients and may be useful in specific situations.",
 
         category:
-            "Vitamins",
+            "Supplements",
 
         readTime:
             "7 min read",
