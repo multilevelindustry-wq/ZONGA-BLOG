@@ -9,7 +9,7 @@ const supplementPosts = [
 
     {
         title:
-            "Understanding Vitamin C",
+            "Are supplements safe",
 
         description:
             "Learn about vitamin C, its role in normal body functions, dietary sources and what to consider when choosing a supplement.",
@@ -27,7 +27,7 @@ const supplementPosts = [
             "7 min read",
 
         url:
-            "vitamin-c.html"
+            "supplement/Are-supplements-safe.html"
     },
 
 
